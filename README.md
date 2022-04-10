@@ -1,5 +1,10 @@
 # vue-portfolio
 
+## Front-end Portfolio Website
+### ⭐ [website](https://dayoungportfolio.netlify.app/)
+
+<img src="screenshot.png" width="750" height="380">
+
 ## Project setup
 ```
 npm install
