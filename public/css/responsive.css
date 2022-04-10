@@ -1,0 +1,263 @@
+@media only screen and (max-width: 280px) {
+  .header-area .main-menu .navbar {
+    padding: 5% !important;
+  }
+
+  .site-main .site-banner .container h1 {
+    font-size: 270%;
+  }
+
+  .site-main .aboutMe-area {
+    padding: 10%;
+  }
+
+  .aboutMe-title h2 span {
+    font-size: 100% !important;
+  }
+
+  .brand-area {
+    display: contents;
+    justify-content: center;
+  }
+
+  .services-area {
+    display: inline;
+  }
+
+  .services-list .services {
+    width: 14rem;
+  }
+
+  .site-main .contact-area .contact .contact-title p a {
+    font-size: 120% !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header-area .main-menu .navbar {
+    padding: 0;
+  }
+  .header-area .main-menu .navbar .navbar-brand {
+    padding: 2% 15%;
+    margin: 0%;
+  }
+  #navbarNav .navbar-nav {
+    padding-left: 16%;
+  }
+  .navbar-nav .nav-item .nav-link {
+    padding: 4% 0;
+  }
+  .site-main {
+    width: 100%;
+  }
+  .site-main .site-banner .container {
+    padding-left: 10%;
+  }
+  .site-main .site-banner .container h3 {
+    padding-top: 25%;
+    font-size: 230%;
+  }
+  .site-main .site-banner .container h1 {
+    font-size: 300%;
+  }
+  .site-buttons .primary-button {
+    margin-right: 5%;
+  }
+  .site-main .aboutMe-area {
+    padding: 0% 10%;
+    margin-bottom: 15%;
+  }
+  .site-main .aboutMe-area .aboutMe-image {
+    padding-top: 0;
+    padding-right: 0;
+  }
+  .site-main .aboutMe-area .img-fluid {
+    width: 70%;
+    height: 75%;
+  }
+  .aboutMe-title h2 span {
+    font-size: 120%;
+  }
+  .aboutMe-title .paragraph {
+    width: 100%;
+  }
+  .brand-area {
+    padding: 1rem 0rem;
+  }
+  .brand-area .single-brand {
+    margin-left: 15%;
+  }
+  .services-area .services-title {
+    padding: 0 15% 0 15%;
+  }
+  .services-area .services-title h1 {
+    font-size: 250%;
+  }
+  .services-list .services {
+    margin: 4rem 0;
+  }
+  .site-main .project-area .button-group {
+    margin: 10% 0 10% 0;
+  }
+  .site-main .project-area .button-group button {
+    font: normal 500 20px/40px var(--roboto);
+    padding: 0;
+  }
+  .site-main .about-area .about-title p {
+    padding: 5% 5%;
+  }
+  .site-main .contact-area .contact .contact-title p {
+    padding: 0%;
+  }
+  .site-main .contact-area .contact .contact-title p a {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .site-main .contact-area .contact .contact-title p {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header-area .main-menu .navbar {
+    padding: 2% 15%;
+    margin: 0%;
+  }
+  .header-area .main-menu .navbar .navbar-brand {
+    padding-top: 4%;
+    padding-bottom: 2%;
+  }
+  .navbar-nav .nav-item .nav-link {
+    padding: 4% 0;
+  }
+  .site-main .site-banner .container h1 {
+    font-size: 350%;
+  }
+  .site-banner .site-title {
+    padding-left: 10%;
+  }
+  .aboutMe-area {
+    padding: 5%;
+  }
+  .aboutMe-area .aboutMe-image {
+    padding: 20% 20% 20% 20%;
+  }
+  .aboutMe-title .paragraph {
+    width: 100%;
+  }
+  .brand-area {
+    padding: 1rem 2rem;
+  }
+  .brand-area .single-brand {
+    margin-left: 15%;
+  }
+  .services-area .services-title {
+    padding: 0 15% 0 15%;
+  }
+  .services-area .services-title h1 {
+    font-size: 250%;
+  }
+  .site-main .project-area .button-group {
+    margin: 10% 0 10% 0;
+  }
+  .site-main .project-area .button-group button {
+    font: normal 500 20px/40px var(--roboto);
+    padding: 0;
+  }
+  .site-main .about-area .about-title p {
+    padding: 5% 5%;
+  }
+  .site-main .contact-area .contact .contact-title p {
+    padding: 5%;
+  }
+  .site-main .contact-area .contact .contact-title p a {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .services-title {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .brand-area {
+    padding: 0;
+  }
+
+  .services-title {
+    padding: 0 1rem;
+  }
+
+  .title-h1 {
+    font: normal bold 35px/40px var(--roboto);
+  }
+
+  .site-main .contact-area .contact .contact-title p {
+    padding: 1rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .brand-area .container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .justify-content-md-center {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .single-brand {
+    width: 15em;
+    height: 6rem;
+  }
+
+  .services-area .services {
+    width: 26rem;
+    height: 20rem;
+  }
+
+  .card-body {
+    height: 10.55em;
+  }
+
+  .card-body .card-text {
+    height: 6em;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .navbar {
+    padding: 0.7rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 990px) {
+  .single-brand {
+    width: 10rem;
+    
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .services-area .services {
+    width: 12rem;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+  .services-area .services {
+    width: 14rem;
+  }
+}

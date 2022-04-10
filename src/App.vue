@@ -1,28 +1,58 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header ref="Header"></Header>
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"></router-view>
+    <Footer ref="Footer"></Footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "@/components/common/Header"
+import Footer from "@/components/common/Footer"
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
+    'Header': Header,
+    'Footer': Footer,
+  },
+
+  created () {
+
+  },
+
+  mounted() {
+
+  },
+
+  methods: {
+    showHeaderFooter(state) {
+      this.$refs.Header.showHeader(state)
+      this.$refs.Footer.showFooter(state)
+    }
+  },
+
+  beforeCreate() {
+    // let console = (function(oldCons){
+    //   return {
+    //     log: function(){
+    //       if (process.env.VUE_APP_DEBUG === "1") {
+    //         oldCons.log.apply(console, arguments)
+    //       }
+    //     }
+    //   }
+    // }(window.console))
+    // window.console = console
   }
+
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
