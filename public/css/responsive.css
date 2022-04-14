@@ -245,7 +245,25 @@
 @media only screen and (min-width: 767px) and (max-width: 990px) {
   .single-brand {
     width: 10rem;
-    
+  }
+}
+
+@media (max-width: 992px) {
+  .header-menu {
+    display: none;
+  }
+
+  .header-menu.mobileMenuActive {
+    display: block;
+  }
+
+  .navbar-expand-lg {
+    position: relative;
+    align-items: first;
+  }
+
+  .navbar-light .navbar-toggler {
+    height: 20%;
   }
 }
 

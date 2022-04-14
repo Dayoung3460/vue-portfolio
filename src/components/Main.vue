@@ -6,18 +6,20 @@
           <div class="col-lg-6 col-md-12 site-title">
             <h3 class="title-text">Hey</h3>
             <h1 class="title-text text-uppercase">I'm Dayoung,</h1>
-            <h4 class="text-uppercase">creative web developer</h4>
+            <h4 class="text-uppercase">Front-end developer</h4>
             <div class="site-buttons">
               <div class="d-flex flex-row flex-wrap">
-                <button type="button" class="btn button primary-button text-uppercase cvBtn" onclick="openCV()">CV</button>
-                <div class="cv">
+                <button type="button" class="btn button primary-button" @click="openCV(true)">이력서 <span style="font: initial">(Kor)</span></button>
+                <button type="button" class="btn button primary-button" @click="openCV(false)">CV <span style="font: initial">(Eng)</span></button>
+                <div class="cv" :class="{ active: openCVBox }" v-show="openCVBox">
                   <div class="animate cvDiv">
-                    <a class="close" onclick="closeCV()">x</a>
-                    <a href="CV_김다영.pdf" class="download" download>Download</a>
-                    <img alt="CV">
+                    <a class="close" @click="openCVBox = false">x</a>
+                    <a href="이력서_김다영(프론트앤드).pdf" class="download" download v-show="isKorCV">Download</a>
+                    <a href="CV_Dayoung_Kim(Front-end).pdf" class="download" download v-show="!isKorCV">Download</a>
+                    <img src="img/CV.jpeg" alt="CV(KOR)" v-show="isKorCV"/>
+                    <img src="img/CV(eng).PNG" alt="CV(ENG)" v-show="!isKorCV"/>
                   </div>
                 </div>
-                <!-- <button type="button" class="btn button secondary-button text-uppercase">Cover Letter</button> -->
               </div>
             </div>
           </div>
@@ -435,7 +437,25 @@
 
 <script>
 export default {
-  name: "VueMain"
+  name: "VueMain",
+
+  data() {
+    return {
+      openCVBox: false,
+      isKorCV: false,
+    }
+  },
+
+  methods: {
+    openCV(isKor) {
+      this.openCVBox = true
+      if(isKor) {
+        this.isKorCV = true
+      } else {
+        this.isKorCV = false
+      }
+    }
+  }
 }
 </script>
 
