@@ -101,3 +101,7 @@ p.para {
     transform: scale(1);
   }
 }
+
+.point {
+  cursor: pointer;
+}

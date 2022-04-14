@@ -11,20 +11,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="mr-auto"></div>
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span>
-              </a>
+            <li class="nav-item point" :class="{ active: activeMenu === 0 }" @click="scrollToElement(0)">
+              <a class="nav-link">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#aboutMe">About</a>
+            <li class="nav-item point" :class="{ active: activeMenu === 1 }" @click="scrollToElement(1)">
+              <a class="nav-link">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#smallProject">Portfolio</a>
+            <li class="nav-item point" :class="{ active: activeMenu === 2 }" @click="scrollToElement(2)">
+              <a class="nav-link">Portfolio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+            <li class="nav-item point" :class="{ active: activeMenu === 3 }" @click="scrollToElement(3)">
+              <a class="nav-link">Contact</a>
             </li>
-
           </ul>
         </div>
       </nav>
@@ -36,6 +34,36 @@
 
 export default {
   name: 'VueHeader',
+
+  data() {
+    return {
+      activeMenu: 0
+    }
+  },
+
+  methods: {
+    scrollToElement(activeMenu) {
+      this.activeMenu = activeMenu
+
+      let el = null
+      if(activeMenu === 1) {
+        el = document.getElementById('aboutMe')
+      } else if(activeMenu === 2) {
+        el = document.getElementById('smallProject')
+      } else if(activeMenu === 3) {
+        el = document.getElementById('contact')
+      } else {
+        el = document.getElementById('mainHome')
+      }
+
+      console.log(el)
+
+      if(el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
+
+    }
+  }
 
 }
 </script>

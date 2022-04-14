@@ -2,7 +2,7 @@
   <footer class="footer-area">
     <div class="container">
       <div class="site-logo text-center">
-        <a href="#"><img alt="logo"></a>
+        <a href="#"><img src="img/logo.png" alt="logo"></a>
       </div>
       <div class="social text-center">
         <a href="https://www.linkedin.com/in/dayoung-clara-kim-5b2b0b140" target="_blank">

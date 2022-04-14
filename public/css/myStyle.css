@@ -11,8 +11,8 @@
 .header-area {
   position: -webkit-sticky;
   position: sticky;
-  top: -10px;
   background: whitesmoke;
+  top: 0;
   box-shadow: var(--box-shadow);
   z-index: 2;
   overflow-x: hidden;
@@ -150,7 +150,7 @@
 
 /* =====================About ================== */
 .aboutMe-area {
-  padding: 8rem 5rem;
+  padding: 5rem 5rem 0 5rem;
 }
 
 .aboutMe-image {
@@ -173,7 +173,11 @@
 /*===================brand Area================ */
 
 .brand-area {
-  padding: 1rem auto;
+  padding: 5rem 0;
+}
+
+.brand-area .container {
+  padding-top: 5rem;
 }
 
 .single-brand {
@@ -235,7 +239,7 @@
 }
 
 .services-area {
-  padding: 7rem 0.8rem;
+  padding: 7rem 0.8rem 0 0.8rem;
 }
 
 .services-title {
@@ -371,10 +375,14 @@
 
 /* ===============contact me Area============ */
 
+.site-main .contact-area {
+  padding-top: 9rem;
+}
+
 .site-main .contact-area .contact {
   background: url(../Img/contactMeBg.png) no-repeat;
   padding: 5rem 0;
-  margin: 3rem auto;
+  margin: 0 auto 3rem auto;
 }
 
 .site-main .contact-area .contact .contact-title h4 {

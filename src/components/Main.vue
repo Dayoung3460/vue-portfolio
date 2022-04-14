@@ -1,9 +1,6 @@
 <template>
-  <main
-      class="site-main">
-
-    <!-- ============Start Banner Area ==========-->
-    <section class="site-banner">
+  <main class="site-main">
+    <section class="site-banner" id="mainHome">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12 site-title">
@@ -27,9 +24,6 @@
         </div>
       </div>
     </section>
-    <!-- =============End Banner Area ============-->
-
-    <!-- ============Start About Area ==============-->
     <section class="aboutMe-area" id="aboutMe">
       <div class="container-fluid">
         <div class="row">
@@ -53,12 +47,6 @@
         </div>
       </div>
     </section>
-
-
-    <!--================ End About Area ==============-->
-
-    <!-- ===========Start Small divs Area(brand)======== -->
-
     <section class="brand-area" id="smallProject">
       <div class="container">
         <div class="row">
@@ -122,12 +110,7 @@
         </div>
       </div>
     </section>
-
-    <!-- =============End Small divs Area========== -->
-
-    <!-- =============Start Service Area========== -->
-
-    <section class="services-area" id="service">
+    <section class="services-area">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center services-title">
@@ -215,11 +198,6 @@
         </div>
       </div>
     </section>
-
-    <!-- =============End Service Area========== -->
-
-    <!-- ==============Start project area ===========-->
-
     <!-- <div class="project-area">
                                                                                 <div class="container">
                                                                                     <div class="project-title pb-5">
@@ -356,12 +334,6 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div> -->
-
-
-    <!-- ==============End project area =============-->
-
-    <!--========== Start client say about me area===== -->
-
     <!-- <section class="about-area"> <div class="container">
                                                             <div class="row text-center">
                                                                 <div class="col-12">
@@ -439,12 +411,8 @@
                                                             </div>
                                                         </div>
                                                     </section> -->
-
-    <!--=========== End client say about me area====== -->
-
-    <!-- ============Start contact me Area============ -->
-
-    <section class="contact-area" id="contact"> <div class="container contact">
+    <section class="contact-area" id="contact">
+      <div class="container contact">
       <div class="col-lg-12 text-center contact-title">
         <h4 class="text-uppercase">Get In Touch</h4>
         <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rerum iste ipsum! Debitis, placeat ipsam.</p>
@@ -462,9 +430,6 @@
       </div>
     </div>
     </section>
-
-    <!-- ============End contact me Area============ -->
-
   </main>
 </template>
 
