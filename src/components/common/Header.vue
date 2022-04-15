@@ -23,6 +23,12 @@
             <li class="nav-item point" :class="{ active: activeMenu === 3 }" @click="scrollToElement(3)">
               <a class="nav-link">Contact</a>
             </li>
+            <li class="nav-item point" @click="selectLang('ko')">
+              <a><img src="img/kor.png" alt="Korean"></a>
+            </li>
+            <li class="nav-item point" @click="selectLang('en')">
+              <a><img src="img/usa.png" alt="Chinese"></a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -43,6 +49,13 @@ export default {
   },
 
   methods: {
+    selectLang(lang) {
+      this.$root.$i18n.locale = lang
+      localStorage.setItem('lang', this.$root.$i18n.locale)
+
+      this.$emit('closeMobileMenu')
+    },
+
     toggleBtn() {
       this.isOpenMobileMenu = !this.isOpenMobileMenu
     },
@@ -59,9 +72,10 @@ export default {
         el = document.getElementById('contact')
       } else {
         el = document.getElementById('mainHome')
+        if(this.$router.history.current.name !== 'Main') {
+          this.$router.push({ name: 'Main' })
+        }
       }
-
-      console.log(el)
 
       if(el) {
         el.scrollIntoView({ behavior: 'smooth' })

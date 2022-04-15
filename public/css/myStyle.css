@@ -20,6 +20,16 @@
 
 .navbar-expand-lg .navbar-nav {
   justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-expand-lg .navbar-nav li:nth-child(5) {
+  margin-left: 1.5rem;
+}
+
+.navbar-expand-lg .navbar-nav img {
+  height: 25px;
+  margin-right: 1rem;
 }
 
 .header-menu {

@@ -9,8 +9,7 @@
             <h4 class="text-uppercase">Front-end developer</h4>
             <div class="site-buttons">
               <div class="d-flex flex-row flex-wrap">
-                <button type="button" class="btn button primary-button" @click="openCV(true)">이력서 <span style="font: initial">(Kor)</span></button>
-                <button type="button" class="btn button primary-button" @click="openCV(false)">CV <span style="font: initial">(Eng)</span></button>
+                <button type="button" class="btn button primary-button" @click="openCV()">{{ $t('message.cv') }}</button>
                 <div class="cv" :class="{ active: openCVBox }" v-show="openCVBox">
                   <div class="animate cvDiv">
                     <a class="close" @click="openCVBox = false">x</a>
@@ -62,7 +61,7 @@
         <div class="row justify-content-md-center miniP">
           <div class="col-md-3">
             <div class="single-brand p1">
-              <a href="to_do_list/index(todolist).html" target="_blank">To-do list</a>
+              <router-link :to="{ name: 'ProjectMiniToDoList' }">To-do list</router-link>
             </div>
           </div>
           <div class="col-md-3">
@@ -447,9 +446,9 @@ export default {
   },
 
   methods: {
-    openCV(isKor) {
+    openCV() {
       this.openCVBox = true
-      if(isKor) {
+      if(this.$root.$i18n.locale === 'ko') {
         this.isKorCV = true
       } else {
         this.isKorCV = false

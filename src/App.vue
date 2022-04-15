@@ -22,7 +22,14 @@ export default {
   },
 
   created () {
-
+    if(localStorage.getItem('lang')) {
+      this.$i18n.locale = localStorage.getItem('lang')
+    } else {
+      let locale = navigator.language
+      locale = locale.substring(0, 2)
+      this.$i18n.locale = locale
+      localStorage.setItem('lang', this.$i18n.locale)
+    }
   },
 
   mounted() {
