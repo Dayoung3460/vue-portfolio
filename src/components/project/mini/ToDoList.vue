@@ -109,8 +109,6 @@ export default {
 .content {
   height: 300px;
   padding: 30px;
-  overflow-y: scroll;
-  overflow-x: initial;
 }
 
 ::-webkit-scrollbar {
