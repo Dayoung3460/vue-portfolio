@@ -4,18 +4,11 @@
       <div class="title" style="background: url(img/office.png)">
         <h3>Work</h3>
         <div class="select">
-          <select name="todos" class="filter-todo">
-            <option value="all">All</option>
+          <select name="todos" class="filter-todo" @change="selectFilter()" v-model="filtered">
+            <option value="todos">Todos</option>
             <option value="completed">Checked</option>
             <option value="deleted">Trash</option>
           </select>
-        </div>
-        <div class="github">
-          <button>
-            <a href="https://github.com/Dayoung3460/to_do_list.git" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </button>
         </div>
         <button class="removeAll">remove all</button>
       </div>
@@ -31,7 +24,45 @@
           </span>
         </div>
       </form>
-      <ul class="lists"></ul>
+      <ul class="lists" v-show="filtered === 'todos'">
+        <li class="list"
+            v-show="!todoItem.deleted && !todoItem.completed"
+            v-for="todoItem in todos"
+            :key="todoItem.idx"
+            :class="{ slideRemove: todoItem.deleted, slideCompleted: todoItem.completed }"
+        >
+          <input type="checkbox" class="chkbox"/>
+          <label class="todo-item">{{ todoItem.todo }}</label>
+          <button class="completed" @click="completeTodo(todoItem.idx)"><i class="fas fa-check-circle"></i></button>
+          <button class="trash" @click="deleteTodo(todoItem.idx)"><i class="fas fa-trash-alt"></i></button>
+        </li>
+      </ul>
+      <ul class="lists" v-show="filtered === 'completed'">
+        <li class="list"
+            v-show="!todoItem.deleted && todoItem.completed"
+            v-for="todoItem in todos"
+            :key="todoItem.idx"
+            :class="{ slideRemove: todoItem.deleted, slideCompleted: todoItem.completed }"
+        >
+          <input type="checkbox" class="chkbox"/>
+          <label class="todo-item">{{ todoItem.todo }}</label>
+          <button class="completed" @click="completeTodo(todoItem.idx)"><i class="fas fa-check-circle"></i></button>
+          <button class="trash" @click="deleteTodo(todoItem.idx)"><i class="fas fa-trash-alt"></i></button>
+        </li>
+      </ul>
+      <ul class="lists" v-show="filtered === 'deleted'">
+        <li class="list"
+            v-for="todoItem in todos"
+            :key="todoItem.idx"
+            :class="{ slideRemove: todoItem.deleted, slideCompleted: todoItem.completed }"
+            v-show="todoItem.deleted && !todoItem.completed"
+        >
+          <input type="checkbox" class="chkbox"/>
+          <label class="todo-item">{{ todoItem.todo }}</label>
+          <button class="completed" @click="completeTodo(todoItem.idx)"><i class="fas fa-check-circle"></i></button>
+          <button class="trash" @click="deleteTodo(todoItem.idx)"><i class="fas fa-trash-alt"></i></button>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -44,24 +75,62 @@ export default {
     return {
       todo: '',
       todos: [],
+      idx: 0,
+      filtered: 'todos'
     }
   },
 
-  create() {
+  created () {
+    let todos = localStorage.getItem('todos')
+    if(!todos){
+      return
+    }
+    this.todos = JSON.parse(todos)
+    this.idx = this.todos[this.todos.length - 1].idx + 1
   },
 
   methods: {
+    selectFilter() {
+      console.log(this.filtered)
+    },
+
+    completeTodo(idx) {
+      this.todos.forEach((todo) => {
+        if(todo.idx === idx) {
+          todo.completed = true
+        }
+      })
+    },
+
+    deleteTodo(todoIdx) {
+      this.todos.forEach((todo) => {
+        if(todo.idx === todoIdx) {
+          todo.deleted = true
+          localStorage.setItem('todos', JSON.stringify(this.todos))
+          if(!this.todos.length) {
+            localStorage.removeItem('todos')
+          }
+        }
+      })
+    },
+
     addTodo() {
-      this.todos.push(this.todo)
+      if(!this.todo) {
+        this.notify('error', '할 일을 적어주세요!')
+        return
+      }
+
       if(!localStorage.getItem('todos')) {
+        this.todos.push({ todo: this.todo, idx: this.idx, completed: false, deleted: false })
         localStorage.setItem('todos', JSON.stringify(this.todos))
       }
       else {
         let lastTodos = JSON.parse(localStorage.getItem('todos'))
-        lastTodos.push(this.todo)
+        lastTodos.push({ todo: this.todo, idx: this.idx, completed: false, deleted: false })
+        this.todos = lastTodos
         localStorage.setItem('todos', JSON.stringify(lastTodos))
       }
-
+      this.idx += 1
       this.todo = ''
     }
   }
