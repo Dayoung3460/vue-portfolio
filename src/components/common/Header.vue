@@ -1,5 +1,5 @@
 <template>
-  <header class="header-area" id="home">
+  <header class="header-area" id="home" v-if="show">
     <div class="main-menu">
       <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand point" @click="scrollToElement(0)">
@@ -45,10 +45,15 @@ export default {
     return {
       activeMenu: 0,
       isOpenMobileMenu: false,
+      show: true,
     }
   },
 
   methods: {
+    showHeader(bool) {
+      this.show = bool
+    },
+
     selectLang(lang) {
       this.$root.$i18n.locale = lang
       localStorage.setItem('lang', this.$root.$i18n.locale)

@@ -66,7 +66,7 @@
           </div>
           <div class="col-md-3">
             <div class="single-brand p2">
-              <a href="shopping/index(shopping).html" target="_blank">Shopping website</a>
+              <router-link :to="{ name: 'ProjectMiniShoppingMain' }">Shopping website</router-link>
             </div>
           </div>
           <div class="col-md-3">

@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-area">
+  <footer class="footer-area" v-if="show">
     <div class="container">
       <div class="site-logo text-center">
         <a href="#"><img src="img/logo.png" alt="logo"></a>
@@ -23,7 +23,19 @@
 
 <script>
 export default {
-  name: "VueFooter"
+  name: "VueFooter",
+
+  data() {
+    return {
+      show: true,
+    }
+  },
+
+  methods: {
+    showFooter(bool) {
+      this.show = bool
+    },
+  }
 }
 </script>
 

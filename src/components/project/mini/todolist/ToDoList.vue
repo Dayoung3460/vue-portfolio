@@ -1,5 +1,5 @@
 <template>
-  <div class="todolist">
+  <div class="to-do-list">
     <div class="cover">
       <div class="title" style="background: url(img/office.png)">
         <h3>Work</h3>
@@ -115,7 +115,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap");
 
-.todolist {
+.to-do-list {
   width: 30%;
   height: 500px;
   background-color: white;
