@@ -257,6 +257,26 @@
     display: block;
   }
 
+  .header-menu.mobileMenuActive {
+    position: relative;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    float: left;
+  }
+
+  .navbar-expand-lg .navbar-nav li:nth-child(5) {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+  }
+
+  .navbar-expand-lg .navbar-nav li:last-child {
+    right: 50px;
+    bottom: 10px;
+    position: absolute;
+  }
+
   .navbar-expand-lg {
     position: relative;
     align-items: first;

@@ -4,63 +4,39 @@
       <div class="title" style="background: url(img/office.png)">
         <h3>Work</h3>
         <div class="select">
-          <select name="todos" class="filter-todo" @change="selectFilter()" v-model="filtered">
-            <option value="todos">Todos</option>
-            <option value="completed">Checked</option>
-            <option value="deleted">Trash</option>
+          <select name="todos" class="filter-todo" v-model="filtered">
+            <option value="0">Todos</option>
+            <option value="1">Checked</option>
+            <option value="2">Trash</option>
           </select>
         </div>
-        <button class="removeAll">remove all</button>
+        <button class="removeAll" @click="removeAll">remove all</button>
       </div>
     </div>
     <div class="content">
       <form class="add">
         <div>
           <input type="text" placeholder="Make yourself busy!" class="input" autofocus v-model="todo"/>
-          <span class="addBtn point" @click="addTodo">
+          <span class="add-btn point" @click="addTodo">
             <a class="plusBtn">
               <i class="fas fa-plus"></i>
             </a>
           </span>
         </div>
       </form>
-      <ul class="lists" v-show="filtered === 'todos'">
+      <ul class="lists">
         <li class="list"
-            v-show="!todoItem.deleted && !todoItem.completed"
+            v-show="(filtered === '0' && todoItem.status === '0') ||
+                    (filtered === '1' && todoItem.status === '1') ||
+                    (filtered === '2' && todoItem.status === '2')"
             v-for="todoItem in todos"
             :key="todoItem.idx"
-            :class="{ slideRemove: todoItem.deleted, slideCompleted: todoItem.completed }"
+            :class="{ slideRemove: todoItem.status === '2' }"
         >
           <input type="checkbox" class="chkbox"/>
           <label class="todo-item">{{ todoItem.todo }}</label>
-          <button class="completed" @click="completeTodo(todoItem.idx)"><i class="fas fa-check-circle"></i></button>
-          <button class="trash" @click="deleteTodo(todoItem.idx)"><i class="fas fa-trash-alt"></i></button>
-        </li>
-      </ul>
-      <ul class="lists" v-show="filtered === 'completed'">
-        <li class="list"
-            v-show="!todoItem.deleted && todoItem.completed"
-            v-for="todoItem in todos"
-            :key="todoItem.idx"
-            :class="{ slideRemove: todoItem.deleted, slideCompleted: todoItem.completed }"
-        >
-          <input type="checkbox" class="chkbox"/>
-          <label class="todo-item">{{ todoItem.todo }}</label>
-          <button class="completed" @click="completeTodo(todoItem.idx)"><i class="fas fa-check-circle"></i></button>
-          <button class="trash" @click="deleteTodo(todoItem.idx)"><i class="fas fa-trash-alt"></i></button>
-        </li>
-      </ul>
-      <ul class="lists" v-show="filtered === 'deleted'">
-        <li class="list"
-            v-for="todoItem in todos"
-            :key="todoItem.idx"
-            :class="{ slideRemove: todoItem.deleted, slideCompleted: todoItem.completed }"
-            v-show="todoItem.deleted && !todoItem.completed"
-        >
-          <input type="checkbox" class="chkbox"/>
-          <label class="todo-item">{{ todoItem.todo }}</label>
-          <button class="completed" @click="completeTodo(todoItem.idx)"><i class="fas fa-check-circle"></i></button>
-          <button class="trash" @click="deleteTodo(todoItem.idx)"><i class="fas fa-trash-alt"></i></button>
+          <button class="completed" v-show="todoItem.status !== '1'" @click="changeTodoStatus('1', todoItem.idx)"><i class="fas fa-check-circle"></i></button>
+          <button class="trash" v-show="todoItem.status !== '2'" @click="changeTodoStatus('2', todoItem.idx)"><i class="fas fa-trash-alt"></i></button>
         </li>
       </ul>
     </div>
@@ -76,7 +52,7 @@ export default {
       todo: '',
       todos: [],
       idx: 0,
-      filtered: 'todos'
+      filtered: '0',
     }
   },
 
@@ -90,25 +66,24 @@ export default {
   },
 
   methods: {
-    selectFilter() {
-      console.log(this.filtered)
+    removeAll() {
+      localStorage.removeItem('todos')
+      this.notify('success', '모두 삭제되었습니다.')
+      this.todos = []
     },
 
-    completeTodo(idx) {
-      this.todos.forEach((todo) => {
-        if(todo.idx === idx) {
-          todo.completed = true
-        }
-      })
-    },
-
-    deleteTodo(todoIdx) {
-      this.todos.forEach((todo) => {
+    changeTodoStatus(status, todoIdx) {
+      this.todos.forEach(async (todo) => {
         if(todo.idx === todoIdx) {
-          todo.deleted = true
-          localStorage.setItem('todos', JSON.stringify(this.todos))
+          if(status === '1') {
+            todo.status = '1'
+          } else if(status === '2'){
+            todo.status = '2'
+          }
+
+          await localStorage.setItem('todos', JSON.stringify(this.todos))
           if(!this.todos.length) {
-            localStorage.removeItem('todos')
+            await localStorage.removeItem('todos')
           }
         }
       })
@@ -121,12 +96,11 @@ export default {
       }
 
       if(!localStorage.getItem('todos')) {
-        this.todos.push({ todo: this.todo, idx: this.idx, completed: false, deleted: false })
+        this.todos.push({ todo: this.todo, idx: this.idx, status: '0' })
         localStorage.setItem('todos', JSON.stringify(this.todos))
-      }
-      else {
+      } else {
         let lastTodos = JSON.parse(localStorage.getItem('todos'))
-        lastTodos.push({ todo: this.todo, idx: this.idx, completed: false, deleted: false })
+        lastTodos.push({ todo: this.todo, idx: this.idx, status: '0' })
         this.todos = lastTodos
         localStorage.setItem('todos', JSON.stringify(lastTodos))
       }
@@ -148,6 +122,7 @@ export default {
   border-radius: 10px;
   box-shadow: 15px 15px 12px rgba(52, 19, 1, 0.3);
   margin: 5rem auto;
+  min-width: 352px;
 }
 
 .cover .title {
@@ -181,11 +156,11 @@ export default {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: black;
+  background: var(--gradient-color);
 }
 
 .content form {
@@ -193,7 +168,7 @@ export default {
   justify-content: center;
   margin: 0px 0px 25px 0;
   font-size: 2rem;
-  width: 350px;
+  width: 100%;
 }
 
 .content form input {
@@ -203,13 +178,18 @@ export default {
   outline: none;
 }
 
-.content form .addBtn a {
+.content form .add-btn {
+  float: right;
+}
+
+.content form .add-btn a {
   color: inherit;
 }
 
 .content form > * {
   border: none;
   height: 40px;
+  width: 100%;
 }
 
 .content input[type="text"] {
@@ -217,6 +197,7 @@ export default {
   font-weight: 700;
   font-size: 1.5rem;
   color: #520d63;
+  width: 90%;
 }
 
 .content input::placeholder {
@@ -225,7 +206,9 @@ export default {
 
 .content .lists {
   padding-left: 0;
-  overflow: hidden;
+  padding-right: 10px;
+  overflow: auto;
+  height: 11em;
 }
 
 .content .lists li {
@@ -235,7 +218,6 @@ export default {
 .content .lists li button {
   float: right;
   cursor: pointer;
-  margin-top: 0.4em;
   margin-left: 0.7em;
   padding: 0;
   border: none;
@@ -246,12 +228,10 @@ export default {
 
 .content .lists li .trash:hover {
   color: red;
-  font-size: 1.2rem;
 }
 
 .content .lists li .completed:hover {
   color: green;
-  font-size: 1.2rem;
 }
 
 .content ul {
@@ -312,12 +292,12 @@ export default {
 
 .slideRemove {
   transform: translateY(1rem);
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
 .slideCompleted {
   transform: translateX(15rem);
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
 .list {
@@ -326,7 +306,7 @@ export default {
 
 .todo-item {
   display: inline-block;
-  width: 70%;
+  width: 65%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -393,13 +373,6 @@ select {
 
 .title .removeAll:focus {
   outline: none;
-}
-
-.title .github {
-  position: absolute;
-  right: 3.7em;
-  bottom: 0.05em;
-  font-size: 1.7rem;
 }
 
 .title .github a {

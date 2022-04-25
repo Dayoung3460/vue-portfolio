@@ -5,6 +5,7 @@
       <router-view v-if="$route.meta.keepAlive"></router-view>
     </keep-alive>
     <router-view v-if="!$route.meta.keepAlive"></router-view>
+    <Alert ref="Alert"></Alert>
     <Footer ref="Footer"></Footer>
   </div>
 </template>
@@ -12,6 +13,7 @@
 <script>
 import Header from "@/components/common/Header"
 import Footer from "@/components/common/Footer"
+import Alert from "@/components/common/Alert"
 
 export default {
   name: 'App',
@@ -19,6 +21,7 @@ export default {
   components: {
     'Header': Header,
     'Footer': Footer,
+    'Alert': Alert,
   },
 
   created () {
