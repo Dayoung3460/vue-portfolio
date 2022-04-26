@@ -7,6 +7,7 @@ import ProjectMiniToDoList from "../components/project/mini/todolist/ToDoList"
 import ProjectMiniShoppingMain from "../components/project/mini/shopping/Main"
 import ProjectMiniShoppingCart from "../components/project/mini/shopping/Cart"
 import ProjectMiniClock from "../components/project/mini/clock/clock"
+import ProjectMiniJumpingGame from "../components/project/mini/jumpingGame/JumpingGame"
 
 export default new Router({
   routes: [
@@ -34,6 +35,11 @@ export default new Router({
       path:'/project/mini/clock',
       name: 'ProjectMiniClock',
       component: ProjectMiniClock
+    },
+    {
+      path:'/project/mini/jumpinggame',
+      name: 'ProjectMiniJumpingGame',
+      component: ProjectMiniJumpingGame
     },
   ],
   scrollBehavior() {

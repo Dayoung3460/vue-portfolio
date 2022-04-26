@@ -83,7 +83,7 @@
           </div>
           <div class="col-md-3">
             <div class="single-brand p5">
-              <a href="jumping game/index(jumping-game).html" target="_blank">Jumping game</a>
+              <router-link :to="{ name: 'ProjectMiniJumpingGame' }">Jumping game</router-link>
             </div>
           </div>
           <div class="col-md-3">
