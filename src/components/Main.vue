@@ -78,7 +78,7 @@
         <div class="row justify-content-md-center miniP">
           <div class="col-md-3">
             <div class="single-brand p4">
-              <a href="analog clock/index(analog_clock).html" target="_blank">Analog clock</a>
+              <router-link :to="{ name: 'ProjectMiniClock' }">Analog clock</router-link>
             </div>
           </div>
           <div class="col-md-3">
