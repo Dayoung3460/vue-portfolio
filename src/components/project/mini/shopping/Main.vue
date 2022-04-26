@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="shopping">
     <div class="top-btns">
       <div class="cart">
-        <router-link :to="{ name: 'ProjectMiniShoppingCart' }">
+        <a class="point" @click="goToCart">
           <i class="fas fa-shopping-cart"></i>
           <span>CART</span>
-          <span class="cart-num-span">{{ cartNum }}</span>
-        </router-link>
+          <span class="cart-num-span"> {{ cartNum }}</span>
+        </a>
       </div>
 <!--      <div class="github">-->
 <!--        <button>-->
@@ -23,7 +23,7 @@
 
     <div class="btn-con">
       <div class="clothes-btn">
-        <img v-for="type in types" :key="type" :src="`/img/${type}.png`" :alt="`${type}.png`" @click="filterItem('type', type)" />
+        <img v-for="type in types" :key="type" :src="require(`./img/${type}.png`)" :alt="`${type}.png`" @click="filterItem('type', type)" />
       </div>
 
       <div class="color-btn">
@@ -34,7 +34,7 @@
     </div>
     <div class="view-con">
       <div v-for="item in data" :key="item.id">
-        <img :src="item.image" :alt="item.type" />
+        <img :src="require(`${item.image}`)" :alt="item.type" />
         <span>{{ item.gender }}, {{ item.size }}</span>
         <button class="add-cart-btn" @click="addCart(item)">ADD CART</button>
       </div>
@@ -71,6 +71,14 @@ export default {
   },
 
   methods: {
+    goToCart() {
+      if(!this.cartNum) {
+        this.notify('error', '장바구니가 비었습니다.')
+        return
+      }
+      this.$router.push({ name: 'ProjectMiniShoppingCart' })
+    },
+
     getCartNumbers() {
       let itemNumbers = localStorage.getItem('cartNumbers')
       if(itemNumbers){
@@ -79,8 +87,13 @@ export default {
     },
 
     filterItem(filterKey, filterValue) {
-      let filterValueWithCap = filterValue.chatAt(0) + filterValue.slice(1)
-      const filteredItems = this.data.filter(item => item[filterKey] === filterValueWithCap)
+      this.initItems()
+
+      let filterValueWithCap = filterValue.charAt(0).toUpperCase() + filterValue.slice(1)
+      const filteredItems = this.data.filter((item) => {
+        console.log(item[filterKey], filterValueWithCap)
+        return item[filterKey] === filterValueWithCap
+      })
       this.data = filteredItems
     },
 
@@ -99,19 +112,9 @@ export default {
         this.cartNum = 1
       }
 
+      this.notify('success', '장바구니에 추가 되었습니다.')
+
       this.setItems(item)
-      this.getTotalCost(item)
-    },
-
-    getTotalCost(item) {
-      let cartCost = localStorage.getItem('totalCost')
-
-      if(cartCost !== null){
-        cartCost = parseInt(cartCost)
-        localStorage.setItem('totalCost', cartCost + item.price)
-      } else {
-        localStorage.setItem('totalCost', item.price)
-      }
     },
 
     setItems(item) {

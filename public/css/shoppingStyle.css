@@ -21,9 +21,13 @@
     --color-btn: #60a3bc;
 }
 
+.shopping {
+    padding: 0 3rem;
+}
+
 .top-btns {
-    position: absolute;
-    top: 15px;
+    position: fixed;
+    z-index: 1;
     right: 15px;
     display: flex;
     justify-content: flex-end;
@@ -79,6 +83,10 @@
 .github a,
 .home a {
     font-size: 2rem;
+}
+
+.home a i {
+    color: var(--color-btn);
 }
 
 .logo-con {
@@ -377,10 +385,12 @@
 
 .basket-con .basket-title {
     padding-right: 9%;
+    margin-bottom: 0;
 }
 
 .basket-con .basket-total {
     font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 .next-btn {
@@ -407,8 +417,8 @@
 
 .remove-all-btn {
     position: absolute;
-    top: 1.5em;
     left: 0.5em;
+    top: 0em;
 }
 
 .remove-all-btn button {
@@ -475,5 +485,34 @@
         cursor: pointer;
         width: 50px;
         height: 50px;
+    }
+
+    .btn-con .color-btn {
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .btn-con {
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .btn-con .clothes-btn img {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .btn-con .color-btn {
+        text-align: center;
+    }
+
+    .btn-con .color-btn button {
+        width: 70px;
+        height: 25px;
+        font-size: 1rem;
+        letter-spacing: 1px;
     }
 }
