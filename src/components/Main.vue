@@ -83,7 +83,7 @@
           </div>
           <div class="col-md-3">
             <div class="single-brand p5">
-              <router-link :to="{ name: 'ProjectMiniJumpingGame' }">Jumping game</router-link>
+              <router-link :to="{ name: 'ProjectMiniJumpingGameStart' }">Jumping game</router-link>
             </div>
           </div>
           <div class="col-md-3">

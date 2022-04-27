@@ -3,6 +3,9 @@
 .jumping-game {
     font-family: 'Press Start 2P', cursive;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
 }
 
 .jumping-game .grid {
@@ -20,12 +23,24 @@
     border-radius: 5px;
 }
 
+.jumping-game .grid .character1 {
+    background-image: url(../img/character1.png);
+}
+
+.jumping-game .grid .character2 {
+    background-image: url(../img/character2.png);
+}
+
+.jumping-game .grid .character3 {
+    background-image: url(../img/character3.png);
+}
+
 .jumping-game .start-btn {
     position: absolute;
     width: 200px;
     height: 200px;
     top: 50px;
-    left: 90px;
+    left: auto;
     background-image: url(../img/start_btn.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -74,7 +89,8 @@
 }
 
 .jumping-game .arrow-key {
-    margin-top: 170px;
+    margin-top: 0;
+    margin-bottom: 200px;
 }
 
 .jumping-game .arrow-key div i {
@@ -85,7 +101,7 @@
 
 .jumping-game .character {
     width: 350px !important;
-    margin: 300px 25px 0 25px;
+    margin: 30px 25px 0 25px;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 0;
     border-radius: 5px;
@@ -93,14 +109,15 @@
 
 .jumping-game .level {
     width: 350px !important;
-    margin: 250px 25px 0 25px;
+    margin: 170px 25px 0 25px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     color: #fff;
 }
 
 .jumping-game .direction {
-    margin-top: 190px;
+    margin-bottom: 130px;
+    margin-top: 0;
     padding-left: 4px;
 }
 

@@ -1,35 +1,9 @@
 <template>
   <div class="jumping-game">
-<!--    <a href="https://github.com/Dayoung3460/Jumping-Game.git" target="_blank" class="github"><i class="fab fa-github-square"></i></a>-->
-    <button class="start-btn"></button>
-    <div class="arrow-key">
-      <div><i class="fas fa-caret-square-left"></i></div>
-      <div><i class="fas fa-caret-square-up"></i></div>
-      <div><i class="fas fa-caret-square-right"></i></div>
+    <div class="grid">
+      <div class="platform" :style="{ left: platform.left + 'px', bottom: platform.bottom + 'px' }" v-for="(platform, idx) in platforms" :key="idx"></div>
+      <div class="doodler" :style="{ left: platforms[0].left + 'px', bottom: doodlerBottomSpace + 'px' }" :class="{ character1: character === '1', character2: character === '2', character3: character === '3' }"></div>
     </div>
-    <div class="direction">
-      <span>left</span>
-      <span>straight</span>
-      <span>right</span>
-    </div>
-    <form class="character">
-      <input type="radio" checked="checked" id="character1" name="character" value="character1">
-      <img src="/img/character1.png" alt="spongebob"><br>
-      <input type="radio" id="character2" name="character" value="character2">
-      <img src="/img/character2.png" alt="patrick"><br>
-      <input type="radio" id="character3" name="character" value="character3">
-      <img src="/img/character3.png" alt="sandy-cheeks"><br>
-    </form>
-    <form class="level">
-      <p>LEVEL</p>
-      <input type="radio" checked="checked" id="lv1" name="lv" value="lv1">
-      <label for="lv1">1</label>
-      <input type="radio" id="lv2" name="lv" value="lv2">
-      <label for="lv2">2</label>
-      <input type="radio" id="lv3" name="lv" value="lv3">
-      <label for="lv3">3</label>
-    </form>
-    <div class="grid"></div>
   </div>
 </template>
 
@@ -39,12 +13,72 @@ export default {
 
   data() {
     return {
-
+      doodlerLeftSpace: 50,
+      startPoint: 100,
+      doodlerBottomSpace: 0,
+      isGameOver: false,
+      platforms: [],
+      upTimerId: null,
+      downTimerId: null,
+      isJumping: true,
+      isGoingLeft: false,
+      isGoingRight: false,
+      leftTimerId: null,
+      rightTimerId: null,
+      score: 0,
+      character: this.$route.params.character,
+      lv: this.$route.params.lv,
     }
   },
 
   created() {
+    if(!this.character || !this.lv) {
+      this.$router.back()
+    }
 
+    this.doodlerBottomSpace = this.startPoint
+
+    this.createdPlatforms()
+    setInterval(this.movePlatforms, 30)
+  },
+
+  methods: {
+    createdPlatforms() {
+      const platformCount = 5
+      let platGap = 600 / platformCount
+
+      for (let i = 0; i < platformCount; i++) {
+        let newPlatBottom = 60 + i * platGap
+        this.platforms.push({
+          bottom: newPlatBottom,
+          left: Math.random() * 315,
+        });
+      }
+    },
+
+    movePlatforms() {
+      if (this.doodlerBottomSpace > 100) {
+        this.platforms.forEach((platform) => {
+          if(this.lv === '1') {
+            platform.bottom -= 2
+          } else if(this.lv === '2') {
+            platform.bottom -= 4
+          } else {
+            platform.bottom -= 6
+          }
+
+          if (platform.bottom < 10) {
+            this.platforms.shift()
+            this.score++
+
+            this.platforms.push({
+              bottom: 600,
+              left: Math.random() * 315,
+            })
+          }
+        });
+      }
+    },
   }
 }
 </script>
