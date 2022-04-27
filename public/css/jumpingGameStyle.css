@@ -2,6 +2,7 @@
 
 .jumping-game {
     font-family: 'Press Start 2P', cursive;
+    position: relative;
 }
 
 .jumping-game .grid {
@@ -23,7 +24,8 @@
     position: absolute;
     width: 200px;
     height: 200px;
-    top: 60px;
+    top: 50px;
+    left: 90px;
     background-image: url(../img/start_btn.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -68,7 +70,7 @@
 }
 
 .jumping-game .level p {
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .jumping-game .arrow-key {
