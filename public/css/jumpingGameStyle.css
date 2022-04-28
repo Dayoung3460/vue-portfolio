@@ -183,7 +183,7 @@
     cursor: pointer;
 }
 
-.github {
+.jumping-game .github {
     position: absolute;
     z-index: 1;
     top: 560px;
@@ -192,6 +192,6 @@
     cursor: pointer;
 }
 
-.github i {
+.jumping-game .github i {
     font-size: 2rem;
 }

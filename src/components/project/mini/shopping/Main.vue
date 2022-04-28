@@ -8,13 +8,13 @@
           <span class="cart-num-span"> {{ cartNum }}</span>
         </a>
       </div>
-<!--      <div class="github">-->
-<!--        <button>-->
-<!--          <a href="https://github.com/Dayoung3460/shopping-website.git" target="_blank">-->
-<!--            <i class="fab fa-github-square"></i>-->
-<!--          </a>-->
-<!--        </button>-->
-<!--      </div>-->
+      <div class="github">
+        <button>
+          <a href="https://github.com/Dayoung3460/vue-portfolio/tree/master/src/components/project/mini/shopping" target="_blank">
+            <i class="fab fa-github-square"></i>
+          </a>
+        </button>
+      </div>
     </div>
 
     <div class="logo-con" @click="initItems">

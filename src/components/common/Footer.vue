@@ -8,7 +8,7 @@
         <a href="https://www.linkedin.com/in/dayoung-clara-kim-5b2b0b140" target="_blank">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/Dayoung3460/my_portfolio_website.git" target="_blank">
+        <a href="https://github.com/Dayoung3460/vue-portfolio.git" target="_blank">
           <i class="fab fa-github-square"></i>
         </a>
       </div>

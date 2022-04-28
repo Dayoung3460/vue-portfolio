@@ -10,6 +10,13 @@
             <option value="2">Trash</option>
           </select>
         </div>
+        <div class="github">
+          <button>
+            <a href="https://github.com/Dayoung3460/vue-portfolio/tree/master/src/components/project/mini/todolist" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </button>
+        </div>
         <button class="removeAll" @click="removeAll">remove all</button>
       </div>
     </div>
@@ -373,6 +380,11 @@ select {
 
 .title .removeAll:focus {
   outline: none;
+}
+
+.title .github {
+  top: 160px;
+  left: 200px;
 }
 
 .title .github a {

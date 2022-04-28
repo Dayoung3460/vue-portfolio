@@ -63,24 +63,24 @@
 
 /******************* home page********************/
 
-.github,
+.shopping .github,
 .home {
     cursor: pointer;
     transition: all 0.1s ease;
 }
 
-.github:hover,
+.shopping .github:hover,
 .home:hover {
     transform: scale(1.1);
 }
 
-.github button,
+.shopping .github button,
 .home button {
     background-color: transparent;
     border: none;
 }
 
-.github a,
+.shopping .github a,
 .home a {
     font-size: 2rem;
 }

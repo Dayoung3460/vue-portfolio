@@ -52,7 +52,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center services-title">
-            <h1 class="text-uppercase title-h1">JavaScript Mini Project</h1>
+            <h1 class="text-uppercase title-h1">Vue.js Mini Project</h1>
             <p
                 class="para"><!--  -->
             </p>
@@ -69,11 +69,11 @@
               <router-link :to="{ name: 'ProjectMiniShoppingMain' }">Shopping website</router-link>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="single-brand p3">
-              <a href="hotel_website/index(hotel).html" target="_blank">Hotel website</a>
-            </div>
-          </div>
+<!--          <div class="col-md-3">-->
+<!--            <div class="single-brand p3">-->
+<!--              <a href="hotel_website/index(hotel).html" target="_blank">Hotel website</a>-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
         <div class="row justify-content-md-center miniP">
           <div class="col-md-3">
@@ -86,119 +86,119 @@
               <router-link :to="{ name: 'ProjectMiniJumpingGameStart' }">Jumping game</router-link>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="single-brand">
-              <img src="img/logo1.png" alt="project-6">
-            </div>
-          </div>
+<!--          <div class="col-md-3">-->
+<!--            <div class="single-brand">-->
+<!--              <img src="img/logo1.png" alt="project-6">-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
-        <div class="row justify-content-md-center miniP">
-          <div class="col-md-3">
-            <div class="single-brand">
-              <img src="img/logo1.png" alt="project-7">
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="single-brand">
-              <img src="img/logo1.png" alt="project-8">
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="single-brand">
-              <img src="img/logo1.png" alt="project-9">
-            </div>
-          </div>
-        </div>
+<!--        <div class="row justify-content-md-center miniP">-->
+<!--          <div class="col-md-3">-->
+<!--            <div class="single-brand">-->
+<!--              <img src="img/logo1.png" alt="project-7">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-3">-->
+<!--            <div class="single-brand">-->
+<!--              <img src="img/logo1.png" alt="project-8">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-3">-->
+<!--            <div class="single-brand">-->
+<!--              <img src="img/logo1.png" alt="project-9">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </section>
-    <section class="services-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center services-title">
-            <h1 class="text-uppercase title-h1">Portfolio</h1>
-            <p class="para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eum ratione, sapiente assumenda nostrum voluptates, hic recusandae porro saepe deserunt quos animi earum harum debitis, obcaecati asperiores vitae excepturi explicabo.
-            </p>
-          </div>
-        </div>
-        <div class="container services-list">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="services">
-                <div class="services-img text-center py-4">
-                  <img src="img/magic.svg" alt="services1">
-                </div>
-                <div class="card-body text-center">
-                  <h5 class="card-title text-uppercase font-roboto">PHP Website</h5>
-                  <p class="card-text text-secondary">
-                    <button type="button" class="btn btn-default">
-                      <a href="./php_website/index.php" target="_blank">Go to the Website</a>
-                    </button>
-                    Simple and clean table board PHP website that completed with HTML, CSS, Javascript and PHP, MySQL backend database. Displayed a large image in the background and clear buttons. The primary functions are signup, login, logout, setting user profile image and CRUD.
+<!--    <section class="services-area">-->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--          <div class="col-lg-12 text-center services-title">-->
+<!--            <h1 class="text-uppercase title-h1">Portfolio</h1>-->
+<!--            <p class="para">-->
+<!--              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eum ratione, sapiente assumenda nostrum voluptates, hic recusandae porro saepe deserunt quos animi earum harum debitis, obcaecati asperiores vitae excepturi explicabo.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="container services-list">-->
+<!--          <div class="row">-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-12">-->
+<!--              <div class="services">-->
+<!--                <div class="services-img text-center py-4">-->
+<!--                  <img src="img/magic.svg" alt="services1">-->
+<!--                </div>-->
+<!--                <div class="card-body text-center">-->
+<!--                  <h5 class="card-title text-uppercase font-roboto">PHP Website</h5>-->
+<!--                  <p class="card-text text-secondary">-->
+<!--                    <button type="button" class="btn btn-default">-->
+<!--                      <a href="./php_website/index.php" target="_blank">Go to the Website</a>-->
+<!--                    </button>-->
+<!--                    Simple and clean table board PHP website that completed with HTML, CSS, Javascript and PHP, MySQL backend database. Displayed a large image in the background and clear buttons. The primary functions are signup, login, logout, setting user profile image and CRUD.-->
 
-                  </p>
+<!--                  </p>-->
 
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="services">
-                <div class="services-img text-center py-4">
-                  <img src="img/playground.svg" alt="services2">
-                </div>
-                <div class="card-body text-center">
-                  <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>
-                  <p
-                      class="card-text text-secondary">
-                    <!-- <button type="button" class="btn btn-default">
-                                                                                                                                                                                                                                                                                                                                            <a href="" target="_blank">Go to the Website</a>
-                                                                                                                                                                                                                                                                                                                                        </button> -->
-                    Lorem ipsum dolosdf gsdfgsfg ggggg ggggg ggggg ggggg gggg gggggg gggggg ggggg gggg gggggg ggggggr sit amet consectet lorea Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                velit quaerat dicta quasi, numquam a
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-12">-->
+<!--              <div class="services">-->
+<!--                <div class="services-img text-center py-4">-->
+<!--                  <img src="img/playground.svg" alt="services2">-->
+<!--                </div>-->
+<!--                <div class="card-body text-center">-->
+<!--                  <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>-->
+<!--                  <p-->
+<!--                      class="card-text text-secondary">-->
+<!--                    &lt;!&ndash; <button type="button" class="btn btn-default">-->
+<!--                                                                                                                                                                                                                                                                                                                                            <a href="" target="_blank">Go to the Website</a>-->
+<!--                                                                                                                                                                                                                                                                                                                                        </button> &ndash;&gt;-->
+<!--                    Lorem ipsum dolosdf gsdfgsfg ggggg ggggg ggggg ggggg gggg gggggg gggggg ggggg gggg gggggg ggggggr sit amet consectet lorea Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                velit quaerat dicta quasi, numquam a-->
 
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="services">
-                <div class="services-img text-center py-4">
-                  <img src="img/ice-cream.svg" alt="services3">
-                </div>
-                <div class="card-body text-center">
-                  <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>
-                  <p
-                      class="card-text text-secondary">
-                    <!-- <button type="button" class="btn btn-default">
-                                                                                                                                                                                                                                                                                                                                            <a href="" target="_blank">Go to the Website</a>
-                                                                                                                                                                                                                                                                                                                                        </button> -->
-                    Lorem ipsum dolor sit amet consectet lorea Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-12">-->
+<!--              <div class="services">-->
+<!--                <div class="services-img text-center py-4">-->
+<!--                  <img src="img/ice-cream.svg" alt="services3">-->
+<!--                </div>-->
+<!--                <div class="card-body text-center">-->
+<!--                  <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>-->
+<!--                  <p-->
+<!--                      class="card-text text-secondary">-->
+<!--                    &lt;!&ndash; <button type="button" class="btn btn-default">-->
+<!--                                                                                                                                                                                                                                                                                                                                            <a href="" target="_blank">Go to the Website</a>-->
+<!--                                                                                                                                                                                                                                                                                                                                        </button> &ndash;&gt;-->
+<!--                    Lorem ipsum dolor sit amet consectet lorea Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,-->
 
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="services">
-                <div class="services-img text-center py-4">
-                  <img src="img/amusement-park.svg" alt="services4">
-                </div>
-                <div class="card-body text-center">
-                  <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>
-                  <p
-                      class="card-text text-secondary">
-                    <!-- <button type="button" class="btn btn-default">
-                                                                                                                                                                                                                                                                                                                                            <a href="" target="_blank">Go to the Website</a>
-                                                                                                                                                                                                                                                                                                                                        </button> -->
-                    Lorem ipsum dolor sit amet consectet lorea Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-12">-->
+<!--              <div class="services">-->
+<!--                <div class="services-img text-center py-4">-->
+<!--                  <img src="img/amusement-park.svg" alt="services4">-->
+<!--                </div>-->
+<!--                <div class="card-body text-center">-->
+<!--                  <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>-->
+<!--                  <p-->
+<!--                      class="card-text text-secondary">-->
+<!--                    &lt;!&ndash; <button type="button" class="btn btn-default">-->
+<!--                                                                                                                                                                                                                                                                                                                                            <a href="" target="_blank">Go to the Website</a>-->
+<!--                                                                                                                                                                                                                                                                                                                                        </button> &ndash;&gt;-->
+<!--                    Lorem ipsum dolor sit amet consectet lorea Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,-->
 
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
     <!-- <div class="project-area">
                                                                                 <div class="container">
                                                                                     <div class="project-title pb-5">
@@ -421,14 +421,14 @@
           <a href="mailto: kimdayoung771@gmail.com">kimdayoung771@gmail.com</a>
         </p>
       </div>
-      <div class="social text-center">
-        <a href="https://www.linkedin.com/in/dayoung-clara-kim-5b2b0b140" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/Dayoung3460/my_portfolio_website.git" target="_blank">
-          <i class="fab fa-github-square"></i>
-        </a>
-      </div>
+<!--      <div class="social text-center">-->
+<!--        <a href="https://www.linkedin.com/in/dayoung-clara-kim-5b2b0b140" target="_blank">-->
+<!--          <i class="fab fa-linkedin"></i>-->
+<!--        </a>-->
+<!--        <a href="https://github.com/Dayoung3460/vue-portfolio.git" target="_blank">-->
+<!--          <i class="fab fa-github-square"></i>-->
+<!--        </a>-->
+<!--      </div>-->
     </div>
     </section>
   </main>
