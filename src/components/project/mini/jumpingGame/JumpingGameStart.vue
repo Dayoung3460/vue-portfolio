@@ -1,5 +1,6 @@
 <template>
   <div class="jumping-game">
+    <a href="https://github.com/Dayoung3460/vue-portfolio/tree/master/src/components/project/mini/jumpingGame" target="_blank" class="github"><i class="fab fa-github-square"></i></a>
     <div class="grid">
       <button class="start-btn" @click="gameStart()"></button>
       <div class="arrow-key">
@@ -42,24 +43,7 @@ export default {
     return {
       character: '1',
       lv: '1',
-      doodlerLeftSpace: 50,
-      startPoint: 100,
-      doodlerBottomSpace: 0,
-      isGameOver: false,
-      platforms: [],
-      upTimerId: null,
-      downTimerId: null,
-      isJumping: true,
-      isGoingLeft: false,
-      isGoingRight: false,
-      leftTimerId: null,
-      rightTimerId: null,
-      score: 0,
     }
-  },
-
-  created() {
-
   },
 
   methods: {

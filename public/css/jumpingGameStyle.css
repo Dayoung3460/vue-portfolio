@@ -5,7 +5,8 @@
     position: relative;
     display: flex;
     justify-content: space-around;
-    margin-top: 5rem;
+    width: 400px;
+    margin: 5rem auto 0 auto;
 }
 
 .jumping-game .grid {
@@ -148,6 +149,19 @@
     position: absolute;
 }
 
+.jumping-game .score {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.jumping-game .doodler.goLeft {
+    transform: rotateY(180deg);
+}
+
+.jumping-game .doodler.goRight {
+    transform: rotateY(0deg);
+}
+
 .jumping-game .platform {
     width: 85px;
     height: 15px;
@@ -169,15 +183,15 @@
     cursor: pointer;
 }
 
-/*.github {*/
-/*    position: absolute;*/
-/*    z-index: 1;*/
-/*    top: 560px;*/
-/*    left: 350px;*/
-/*    color: #222;*/
-/*    cursor: pointer;*/
-/*}*/
+.github {
+    position: absolute;
+    z-index: 1;
+    top: 560px;
+    left: 350px;
+    color: #222;
+    cursor: pointer;
+}
 
-/*.github i {*/
-/*    font-size: 2rem;*/
-/*}*/
+.github i {
+    font-size: 2rem;
+}
