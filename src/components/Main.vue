@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12 site-title">
-            <h3 class="title-text">Hey</h3>
+            <VueTyper class="title-text" :text="['Hi😁', 'Hello!']" erase-style='backspace'></VueTyper>
             <h1 class="title-text text-uppercase">I'm Dayoung,</h1>
             <h4 class="text-uppercase">Front-end developer</h4>
             <div class="site-buttons">
@@ -565,6 +565,8 @@
 </template>
 
 <script>
+import { VueTyper } from 'vue-typer'
+
 export default {
   name: "VueMain",
 
@@ -573,6 +575,10 @@ export default {
       openCVBox: false,
       isKorCV: false,
     }
+  },
+
+  components: {
+    'VueTyper': VueTyper
   },
 
   methods: {

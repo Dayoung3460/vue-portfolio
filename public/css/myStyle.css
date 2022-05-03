@@ -83,8 +83,7 @@
   background: url(../Img/Botanical.jpg) repeat-x 0% 115%;
 }
 
-.site-title h3 {
-  padding-top: 35%;
+.site-title .title-text {
   font-weight: 700;
   letter-spacing: 8px;
 }
