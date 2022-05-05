@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12 site-title">
-            <VueTyper class="title-text" :text="['Hi😁', 'Hello!']" erase-style='backspace'></VueTyper>
+            <vue-typer class="title-text" :text="['Hi😁', 'Hello!']" erase-style='backspace'></vue-typer>
             <h1 class="title-text text-uppercase">I'm Dayoung,</h1>
             <h4 class="text-uppercase">Front-end developer</h4>
             <div class="site-buttons">
@@ -574,11 +574,17 @@ export default {
     return {
       openCVBox: false,
       isKorCV: false,
+      options: {
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        menu: '#menu',
+        anchors: ['page1', 'page2', 'page3'],
+        sectionsColor: ['#41b883', '#ff5f45', '#0798ec']
+      },
     }
   },
 
   components: {
-    'VueTyper': VueTyper
+    'vue-typer': VueTyper
   },
 
   methods: {
@@ -595,5 +601,6 @@ export default {
 </script>
 
 <style scoped>
+
 
 </style>
