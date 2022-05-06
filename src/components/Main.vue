@@ -84,9 +84,7 @@
         <div class="row">
           <div class="col-lg-12 text-center services-title">
             <h1 class="text-uppercase title-h1">Vue.js Mini Project</h1>
-            <p
-                class="para">
-            </p>
+            <p class="para"></p>
           </div>
         </div>
         <div class="row justify-content-md-center">
@@ -97,19 +95,19 @@
             </router-link>
           </div>
           <div class="single-brand col-md-3">
-            <router-link :to="{ name: 'ProjectMiniShoppingMain' }" class="circle-wrap ">
+            <router-link :to="{ name: 'ProjectMiniShoppingMain' }" class="circle-wrap">
               <img src="img/shopping-website-screenshot.png"/>
               <span class="title">Shopping website</span>
             </router-link>
           </div>
           <div class="single-brand col-md-3">
-            <router-link :to="{ name: 'ProjectMiniClock' }" class="circle-wrap ">
+            <router-link :to="{ name: 'ProjectMiniClock' }" class="circle-wrap">
               <img src="img/analog-clock-screenshot.png"/>
               <span class="title">Analog clock</span>
             </router-link>
           </div>
           <div class="single-brand col-md-3">
-            <router-link :to="{ name: 'ProjectMiniJumpingGameStart' }" class="circle-wrap ">
+            <router-link :to="{ name: 'ProjectMiniJumpingGameStart' }" class="circle-wrap">
               <img src="img/jumping-game-screenshot.png"/>
               <span class="title">Jumping game</span>
             </router-link>
