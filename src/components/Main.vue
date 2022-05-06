@@ -3,9 +3,23 @@
     <section class="site-banner" id="mainHome">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-12 site-title">
+          <div class="col-md-12 site-title">
             <vue-typer class="title-text" :text="['Hi😁', 'Hello!']" erase-style='backspace'></vue-typer>
-            <h1 class="title-text text-uppercase">I'm Dayoung,</h1>
+            <h1 class="title-text text-uppercase">
+              <span>I</span>
+              <span>'</span>
+              <span class="char-text">m</span>
+              <span>D</span>
+              <span class="heart1">💗</span>
+              <span>a</span>
+              <span>y</span>
+              <span>o</span>
+              <span class="heart2">💜</span>
+              <span>u</span>
+              <span>n</span>
+              <span>g</span>
+              <span>,</span>
+            </h1>
             <h4 class="text-uppercase">Front-end developer</h4>
             <div class="site-buttons">
               <div class="d-flex flex-row flex-wrap">

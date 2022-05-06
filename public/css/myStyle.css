@@ -89,6 +89,46 @@
   letter-spacing: 8px;
 }
 
+.site-title h1.title-text span {
+  display: inline-block;
+  position: relative;
+}
+
+.site-title h1.title-text span.heart1 {
+  position: absolute;
+  font-size: 30px !important;;
+  left: 145px;
+}
+
+.site-title h1.title-text span.heart2 {
+  position: absolute;
+  font-size: 30px !important;;
+  left: 292px;
+}
+
+.site-title h1.title-text span.char-text {
+  margin-right: 10px;
+}
+
+.site-title h1.title-text span::after {
+  content: '';
+  display:block;
+  width: 0;
+  height:15px;
+  background:#5e7cf3;
+  position:absolute;
+  bottom: 0%;
+  z-index: -1;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+
+}
+.site-title h1.title-text span:hover::after {
+  width: 100%
+}
+
 .site-title h3::after {
   content: " ";
   height: 2px;
