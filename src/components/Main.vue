@@ -70,126 +70,64 @@
             <p class="para"></p>
           </div>
         </div>
-        <div class="row justify-content-md-center miniP">
-          <div class="col-md-3">
-            <div class="single-brand p1">
-              <a href="https://vanilla-find-a-match.netlify.app/" target="_blank">Find a match</a>
-            </div>
+        <div class="row justify-content-md-center">
+          <div class="single-brand col-md-3">
+            <a href="https://vanilla-find-a-match.netlify.app/" target="_blank" class="circle-wrap">
+              <img src="img/find-a-match-screenshot.png"/>
+              <span class="title">Find a match</span>
+            </a>
           </div>
-          <div class="col-md-3">
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-9">
-              </div>
-            </div>
-          </div>
-            <div class="col-md-3">
-              <div class="col-md-3">
-                <div class="single-brand">
-                  <img src="img/logo1.png" alt="project-9">
-                </div>
-              </div>
-            </div>
+<!--          <div class="col-md-3">-->
+<!--            <div class="col-md-3">-->
+<!--              <div class="single-brand">-->
+<!--                <img src="img/logo1.png" alt="project-9">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-3">-->
+<!--            <div class="col-md-3">-->
+<!--              <div class="single-brand">-->
+<!--                <img src="img/logo1.png" alt="project-9">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
-        <div class="row justify-content-md-center miniP">
-          <div class="col-md-3">
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-9">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-9">
-              </div>
-            </div>
-          </div>
-                    <div class="col-md-3">
-                      <div class="single-brand">
-                        <img src="img/logo1.png" alt="project-6">
-                      </div>
-                    </div>
-        </div>
-                <div class="row justify-content-md-center miniP">
-                  <div class="col-md-3">
-                    <div class="single-brand">
-                      <img src="img/logo1.png" alt="project-7">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="single-brand">
-                      <img src="img/logo1.png" alt="project-8">
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="single-brand">
-                      <img src="img/logo1.png" alt="project-9">
-                    </div>
-                  </div>
-                </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center services-title">
             <h1 class="text-uppercase title-h1">Vue.js Mini Project</h1>
             <p
-                class="para"><!--  -->
+                class="para">
             </p>
           </div>
         </div>
-        <div class="row justify-content-md-center miniP">
-          <div class="col-md-3">
-            <div class="single-brand p1">
-              <router-link :to="{ name: 'ProjectMiniToDoList' }">To-do list</router-link>
-            </div>
+        <div class="row justify-content-md-center">
+          <div class="single-brand col-md-3">
+            <router-link :to="{ name: 'ProjectMiniToDoList' }" class="circle-wrap">
+              <img src="img/to-do-list-screenshot.png"/>
+              <span class="title">To-do list</span>
+            </router-link>
           </div>
-          <div class="col-md-3">
-            <div class="single-brand p2">
-              <router-link :to="{ name: 'ProjectMiniShoppingMain' }">Shopping website</router-link>
-            </div>
+          <div class="single-brand col-md-3">
+            <router-link :to="{ name: 'ProjectMiniShoppingMain' }" class="circle-wrap ">
+              <img src="img/shopping-website-screenshot.png"/>
+              <span class="title">Shopping website</span>
+            </router-link>
           </div>
-<!--          <div class="col-md-3">-->
-<!--            <div class="single-brand p3">-->
-<!--              <a href="hotel_website/index(hotel).html" target="_blank">Hotel website</a>-->
-<!--            </div>-->
-<!--          </div>-->
+          <div class="single-brand col-md-3">
+            <router-link :to="{ name: 'ProjectMiniClock' }" class="circle-wrap ">
+              <img src="img/analog-clock-screenshot.png"/>
+              <span class="title">Analog clock</span>
+            </router-link>
+          </div>
+          <div class="single-brand col-md-3">
+            <router-link :to="{ name: 'ProjectMiniJumpingGameStart' }" class="circle-wrap ">
+              <img src="img/jumping-game-screenshot.png"/>
+              <span class="title">Jumping game</span>
+            </router-link>
+          </div>
         </div>
-        <div class="row justify-content-md-center miniP">
-          <div class="col-md-3">
-            <div class="single-brand p4">
-              <router-link :to="{ name: 'ProjectMiniClock' }">Analog clock</router-link>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="single-brand p5">
-              <router-link :to="{ name: 'ProjectMiniJumpingGameStart' }">Jumping game</router-link>
-            </div>
-          </div>
-<!--          <div class="col-md-3">-->
-<!--            <div class="single-brand">-->
-<!--              <img src="img/logo1.png" alt="project-6">-->
-<!--            </div>-->
-<!--          </div>-->
-        </div>
-<!--        <div class="row justify-content-md-center miniP">-->
-<!--          <div class="col-md-3">-->
-<!--            <div class="single-brand">-->
-<!--              <img src="img/logo1.png" alt="project-7">-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-md-3">-->
-<!--            <div class="single-brand">-->
-<!--              <img src="img/logo1.png" alt="project-8">-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-md-3">-->
-<!--            <div class="single-brand">-->
-<!--              <img src="img/logo1.png" alt="project-9">-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
       </div>
       <div class="container">
         <div class="row">
@@ -198,61 +136,15 @@
             <p class="para"></p>
           </div>
         </div>
-        <div class="row justify-content-md-center miniP">
-          <div class="col-md-3">
-            <div class="single-brand p1">
-              <a href="https://60a796954cd5adc8c050d599--dayounghabittracker.netlify.app" target="_blank">Habit tracker</a>
-            </div>
+        <div class="row justify-content-md-center">
+          <div class="single-brand col-md-3">
+            <a href="https://60a796954cd5adc8c050d599--dayounghabittracker.netlify.app" target="_blank" class="circle-wrap">
+              <img src="img/habit-tracker-screenshot.png"/>
+              <span class="title">Habit tracker</span>
+            </a>
           </div>
-<!--          <div class="col-md-3">-->
-<!--            <div class="single-brand p2">-->
-<!--              <router-link :to="{ name: 'ProjectMiniShoppingMain' }">Business card maker</router-link>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-md-3">-->
-<!--            <div class="single-brand p3">-->
-<!--              <a href="hotel_website/index(hotel).html" target="_blank">Youtube</a>-->
-<!--            </div>-->
-<!--          </div>-->
+
         </div>
-        <div class="row justify-content-md-center miniP">
-          <div class="col-md-3">
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-7">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-7">
-              </div>
-            </div>
-          </div>
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-6">
-              </div>
-            </div>
-        </div>
-          <div class="row justify-content-md-center miniP">
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-7">
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-8">
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="single-brand">
-                <img src="img/logo1.png" alt="project-9">
-              </div>
-            </div>
-          </div>
       </div>
     </section>
 <!--    <section class="services-area">-->
