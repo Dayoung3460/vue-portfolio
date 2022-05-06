@@ -98,13 +98,76 @@
   position: absolute;
   font-size: 30px !important;;
   left: 145px;
+  animation: heartbeat1 1s infinite;
 }
 
 .site-title h1.title-text span.heart2 {
   position: absolute;
   font-size: 30px !important;;
   left: 292px;
+  animation: heartbeat2 1s infinite;
 }
+
+@keyframes heartbeat1
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+@keyframes heartbeat2
+{
+  0%
+  {
+    transform: scale( .55 );
+  }
+  10%
+  {
+    transform: scale( 0.8 );
+  }
+  20%
+  {
+    transform: scale( .55 );
+  }
+  40%
+  {
+    transform: scale( 0.8 );
+  }
+  60%
+  {
+    transform: scale( 0.5 );
+  }
+  90%
+  {
+    transform: scale( .85 );
+  }
+  100%
+  {
+    transform: scale( .5 );
+  }
+}
+
 
 .site-title h1.title-text span.char-text {
   margin-right: 10px;
@@ -215,10 +278,6 @@
 /* =====================About ================== */
 .aboutMe-area {
   padding: 5rem 5rem 0 5rem;
-}
-
-.aboutMe-image {
-  padding: 4rem 4rem 0 0;
 }
 
 .aboutMe-title h2 span {

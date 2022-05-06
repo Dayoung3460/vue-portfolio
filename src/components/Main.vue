@@ -49,13 +49,14 @@
           </div>
           <div class="col-lg-6 col-md-12 aboutMe-title">
             <h2 class="text-uppercase pt-5">
-              <span>Let me</span>
-              <span>introduce</span>
-              <span>myself</span>
+              <span>about</span>
+              <span>me</span>
             </h2>
             <div class="paragraph">
-              <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, sed animi. Eligendi amet quisquam laborum, dolor labore voluptatibus suscipit saepe, officia magnam laboriosam repudiandae eos aspernatur modi ipsum necessitatibus quidem.</p>
-              <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia voluptatum delectus officia unde dolores facilis excepturi optio incidunt id quos, ullam vel laborum distinctio praesentium, quisquam ducimus voluptates sed tempora.</p>
+              <p class="para">I'm a Frond-End Developer located in South Korea but willing to work all over the world.
+                I have a strong passion for Frond-End frameworks and am interested in mobile development as well.</p>
+              <p class="para">Detail-oriented person, problem solver and always trying to search for challenges to motivate myself.
+                I don't like being boxed in and want to put myself in a new environment. I love outdoor activities and salad with sweet sauce.</p>
             </div>
             <!-- <button type="button" class="btn button primary-button text-uppercase">Download CV</button> -->
           </div>
@@ -77,20 +78,6 @@
               <span class="title">Find a match</span>
             </a>
           </div>
-<!--          <div class="col-md-3">-->
-<!--            <div class="col-md-3">-->
-<!--              <div class="single-brand">-->
-<!--                <img src="img/logo1.png" alt="project-9">-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-md-3">-->
-<!--            <div class="col-md-3">-->
-<!--              <div class="single-brand">-->
-<!--                <img src="img/logo1.png" alt="project-9">-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
         </div>
       </div>
       <div class="container">
