@@ -53,10 +53,8 @@
               <span>me</span>
             </h2>
             <div class="paragraph">
-              <p class="para">I'm a Frond-End Developer located in South Korea but willing to work all over the world.
-                I have a strong passion for Frond-End frameworks and am interested in mobile development as well.</p>
-              <p class="para">Detail-oriented person, problem solver and always trying to search for challenges to motivate myself.
-                I don't like being boxed in and want to put myself in a new environment. I love outdoor activities and salad with sweet sauce.</p>
+              <p class="para" v-html="$t('message.aboutMe1')"></p>
+              <p class="para" v-html="$t('message.aboutMe2')"></p>
             </div>
             <!-- <button type="button" class="btn button primary-button text-uppercase">Download CV</button> -->
           </div>
@@ -298,6 +296,7 @@
                                                                                                 <div class="title py-4">
                                                                                                     <h4 class="text-uppercase">photography</h4>
                                                                                                     <span class="text-secondary">Upcoming, Portfolio</span>
+
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -437,7 +436,6 @@
       <div class="container contact">
       <div class="col-lg-12 text-center contact-title">
         <h4 class="text-uppercase">Get In Touch</h4>
-        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rerum iste ipsum! Debitis, placeat ipsam.</p>
         <p>
           <a href="mailto: kimdayoung771@gmail.com">kimdayoung771@gmail.com</a>
         </p>

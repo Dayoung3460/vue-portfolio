@@ -14,7 +14,7 @@
       </div>
       <div class="copyright text-center">
         <p class="para">
-          Copyright &copy;2020 Dayoung Kim All Rights Reserved
+          Copyright &copy;2022 Dayoung Kim All Rights Reserved
         </p>
       </div>
     </div>

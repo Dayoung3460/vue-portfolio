@@ -73,7 +73,7 @@ export default {
   methods: {
     goToCart() {
       if(!this.cartNum) {
-        this.notify('error', '장바구니가 비었습니다.')
+        this.notify('error', this.$t('message.emptyCart'))
         return
       }
       this.$router.push({ name: 'ProjectMiniShoppingCart' })
@@ -112,7 +112,7 @@ export default {
         this.cartNum = 1
       }
 
-      this.notify('success', '장바구니에 추가 되었습니다.')
+      this.notify('success', this.$t('message.addCart'))
 
       this.setItems(item)
     },

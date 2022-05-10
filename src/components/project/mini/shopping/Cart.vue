@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="next-btn">
-    <button @click="notify('error', '준비중입니다.')">
+    <button @click="notify('error', $t('message.beingReady'))">
       <a>NEXT</a>
     </button>
   </div>
