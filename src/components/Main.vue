@@ -121,9 +121,21 @@
         </div>
         <div class="row justify-content-md-center">
           <div class="single-brand col-md-3">
-            <a href="https://60a796954cd5adc8c050d599--dayounghabittracker.netlify.app" target="_blank" class="circle-wrap">
+            <a href="https://dayounghabittracker.netlify.app/" target="_blank" class="circle-wrap">
               <img src="img/habit-tracker-screenshot.png"/>
               <span class="title">Habit tracker</span>
+            </a>
+          </div>
+          <div class="single-brand col-md-3">
+            <a href="https://make-business-card.netlify.app" target="_blank" class="circle-wrap">
+              <img src="img/business-card-maker-screenshot.png"/>
+              <span class="title">Business card maker</span>
+            </a>
+          </div>
+          <div class="single-brand col-md-3">
+            <a href="https://youtube-dayoung.netlify.app" target="_blank" class="circle-wrap">
+              <img src="img/youtube-screenshot.png"/>
+              <span class="title">Youtube</span>
             </a>
           </div>
 

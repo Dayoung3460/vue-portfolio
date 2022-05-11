@@ -9,6 +9,14 @@
     margin: 5rem auto;
 }
 
+.clock a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 24px;
+    color: #0056b3;
+}
+
 .clock .number {
     --rotation: 0;
     position: absolute;

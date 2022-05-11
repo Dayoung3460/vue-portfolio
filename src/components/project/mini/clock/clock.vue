@@ -16,6 +16,11 @@
     <div class="number number10">&#x2169;</div>
     <div class="number number11">&#x216A;</div>
     <div class="number number12">&#x216B;</div>
+
+    <a href="https://github.com/Dayoung3460/vue-portfolio/tree/master/src/components/project/mini/clock" target="_blank" class="github">
+      <i class="fab fa-github-square"></i>
+    </a>
+
   </div>
 </template>
 

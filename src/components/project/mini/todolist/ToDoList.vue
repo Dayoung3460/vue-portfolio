@@ -384,7 +384,9 @@ select {
 
 .title .github {
   top: 160px;
-  left: 200px;
+  right: 100px;
+  width: fit-content;
+  position: absolute;
 }
 
 .title .github a {
@@ -392,8 +394,10 @@ select {
   color: #612486;
 }
 
-.title .github a:hover {
-  color: #fff;
+.title .github a i {
+  background: #fff;
+  padding: 3px;
+  border-radius: 50%;
 }
 
 .title .github button {
