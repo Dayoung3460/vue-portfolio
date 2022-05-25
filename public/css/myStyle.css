@@ -11,11 +11,32 @@
 .header-area {
   position: -webkit-sticky;
   position: sticky;
-  top: -10px;
   background: whitesmoke;
+  top: 0;
   box-shadow: var(--box-shadow);
   z-index: 2;
   overflow-x: hidden;
+}
+
+.navbar-expand-lg .navbar-nav {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-expand-lg .navbar-nav li:nth-child(5) {
+  margin-left: 1.5rem;
+}
+
+.navbar-expand-lg .navbar-nav img {
+  height: 25px;
+  margin-right: 1rem;
+}
+
+.header-menu {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
 }
 
 .navbar-brand {
@@ -48,7 +69,7 @@
 .site-banner {
   height: 550px;
   position: relative;
-  z-index: 1;
+  padding-top: 5rem;
 }
 
 .site-banner::before {
@@ -63,10 +84,112 @@
   background: url(../Img/Botanical.jpg) repeat-x 0% 115%;
 }
 
-.site-title h3 {
-  padding-top: 35%;
+.site-title .title-text {
   font-weight: 700;
   letter-spacing: 8px;
+}
+
+.site-title h1.title-text span {
+  display: inline-block;
+  position: relative;
+}
+
+.site-title h1.title-text span.heart1 {
+  position: absolute;
+  font-size: 30px !important;;
+  left: 145px;
+  animation: heartbeat1 1s infinite;
+}
+
+.site-title h1.title-text span.heart2 {
+  position: absolute;
+  font-size: 30px !important;;
+  left: 292px;
+  animation: heartbeat2 1s infinite;
+}
+
+@keyframes heartbeat1
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+@keyframes heartbeat2
+{
+  0%
+  {
+    transform: scale( .55 );
+  }
+  10%
+  {
+    transform: scale( 0.8 );
+  }
+  20%
+  {
+    transform: scale( .55 );
+  }
+  40%
+  {
+    transform: scale( 0.8 );
+  }
+  60%
+  {
+    transform: scale( 0.5 );
+  }
+  90%
+  {
+    transform: scale( .85 );
+  }
+  100%
+  {
+    transform: scale( .5 );
+  }
+}
+
+
+.site-title h1.title-text span.char-text {
+  margin-right: 10px;
+}
+
+.site-title h1.title-text span::after {
+  content: '';
+  display:block;
+  width: 0;
+  height:15px;
+  background:#5e7cf3;
+  position:absolute;
+  bottom: 0%;
+  z-index: -1;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+
+}
+.site-title h1.title-text span:hover::after {
+  width: 100%
 }
 
 .site-title h3::after {
@@ -108,6 +231,10 @@
   padding-top: 0px;
 }
 
+.cv.active {
+  display: grid;
+}
+
 .cv .cvDiv {
   position: relative;
   padding-top: 1em;
@@ -134,7 +261,7 @@
 .cv .close {
   position: absolute;
   left: 70%;
-  top: 2.9em;
+  top: 2em;
   color: black;
   font-size: 2.5em;
   font-weight: bold;
@@ -150,11 +277,7 @@
 
 /* =====================About ================== */
 .aboutMe-area {
-  padding: 8rem 5rem;
-}
-
-.aboutMe-image {
-  padding: 4rem 4rem 0 0;
+  padding: 5rem 5rem 0 5rem;
 }
 
 .aboutMe-title h2 span {
@@ -173,41 +296,73 @@
 /*===================brand Area================ */
 
 .brand-area {
-  padding: 1rem auto;
+  padding: 5rem 0;
+}
+
+.brand-area .container {
+  padding-top: 5rem;
+}
+
+.brand-area .container .justify-content-md-center {
+  position: relative;
+  transition: all 0.3s ease;
+  height: 300px;
+}
+
+.brand-area .container .circle-wrap {
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.brand-area .container .justify-content-md-center .title {
+  position: absolute;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  color: #fff;
+  background: black;
+  line-height: 140px;
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  font-size: 16px;
+  top: 78px;
+  left: 72px;
+}
+
+.brand-area .container .justify-content-md-center .title:hover {
+  box-shadow: var(--box-shadow);
+  position: absolute;
+  padding: 0;
+  opacity: .8;
+  background: var(--primary-color2);
+  top: 78px;
+  left: 72px;
 }
 
 .single-brand {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.2rem solid var(--border-color);
   border-radius: 1rem;
   text-align: center;
-  margin: 2rem auto;
-  padding: 1em;
-  width: 200px;
-  height: 80px;
-  cursor: pointer;
+  padding: 0;
   transition: all 0.3s ease;
-}
-
-.single-brand:hover {
-  box-shadow: var(--box-shadow);
-  transform: scale(1.1);
-  background: #f4f4ff;
-  border-radius: 0rem;
-  border: 0rem;
+  width: 100%;
+  height: 100%;
 }
 
 .single-brand img {
-  width: 70%;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.1s ease;
 }
 
-.single-brand a {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+.single-brand img:hover {
+  border: 2px solid black;
+  opacity: 0.5;
 }
 
 .p1 a,
@@ -235,7 +390,7 @@
 }
 
 .services-area {
-  padding: 7rem 0.8rem;
+  padding: 7rem 0.8rem 0 0.8rem;
 }
 
 .services-title {
@@ -298,6 +453,10 @@
 
 .site-main .project-area {
   padding: 4rem 0;
+}
+
+.site-main span.char.custom.typed {
+  color: #212529;
 }
 
 .site-main .project-area .button-group button {
@@ -371,10 +530,14 @@
 
 /* ===============contact me Area============ */
 
+.site-main .contact-area {
+  padding-top: 9rem;
+}
+
 .site-main .contact-area .contact {
   background: url(../Img/contactMeBg.png) no-repeat;
   padding: 5rem 0;
-  margin: 3rem auto;
+  margin: 0 auto 3rem auto;
 }
 
 .site-main .contact-area .contact .contact-title h4 {

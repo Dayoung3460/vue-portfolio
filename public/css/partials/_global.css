@@ -102,6 +102,6 @@ p.para {
   }
 }
 
-.active {
-  display: block !important;
+.point {
+  cursor: pointer;
 }

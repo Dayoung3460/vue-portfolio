@@ -1,0 +1,518 @@
+:root {
+    /* color */
+    --color-black: #3f454d;
+    --color-white: #e6e3e3;
+    --color-blue: #3b88c3;
+    --color-yellow: #e2f025;
+    --color-pink: #fd7f84;
+    --color-grey: #818080;
+    --color-brown: #b68843;
+    --color-green: #21a855;
+    --color-orange: #f8ac20;
+    --color-pattern: linear-gradient(
+            90deg,
+            rgb(173, 169, 247) 0%,
+            rgb(35, 182, 96) 50%,
+            rgb(223, 200, 101) 100%
+    );
+    --color-purple: #a00bb4;
+    --color-red: #f31313;
+
+    --color-btn: #60a3bc;
+}
+
+.shopping {
+    padding: 0 3rem;
+}
+
+.top-btns {
+    position: fixed;
+    z-index: 1;
+    right: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cart {
+    margin-right: 1rem;
+    background-color: var(--color-btn);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.cart:hover {
+    background: var(--color-pink);
+    border-radius: 0;
+    transform: scale(1.1);
+}
+
+.cart:hover + a {
+    color: #fff;
+}
+
+.cart a {
+    color: #222;
+    text-decoration: none;
+}
+
+.cart a span {
+    font-weight: 700;
+}
+
+/******************* home page********************/
+
+.shopping .github,
+.home {
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.shopping .github:hover,
+.home:hover {
+    transform: scale(1.1);
+}
+
+.shopping .github button,
+.home button {
+    background-color: transparent;
+    border: none;
+}
+
+.shopping .github a,
+.home a {
+    font-size: 2rem;
+}
+
+.home a i {
+    color: var(--color-btn);
+}
+
+.logo-con {
+    display: flex;
+    justify-content: center;
+    margin: 3em auto;
+}
+
+.img-logo {
+    width: 220px;
+    height: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+.btn-con .color-btn {
+    padding-top: 10px;
+}
+
+.btn-con .clothes-btn img,
+.btn-con .color-btn button {
+    margin: 5px;
+    transition: transform 0.2s ease;
+}
+
+.img-logo:hover,
+.btn-con .clothes-btn img:hover,
+.btn-con .color-btn button:hover {
+    transform: scale(1.1);
+}
+
+.btn-con .clothes-btn img {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.btn-con .color-btn button {
+    width: 90px;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-family: "Inconsolata", monospace;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.btn-con .color-btn .blue-btn {
+    background: var(--color-blue);
+}
+
+.btn-con .color-btn .yellow-btn {
+    background: var(--color-yellow);
+}
+
+.btn-con .color-btn .red-btn {
+    background: var(--color-red);
+    color: var(--color-white);
+}
+.btn-con .color-btn .pink-btn {
+    background: var(--color-pink);
+}
+
+.btn-con .color-btn .black-btn {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.btn-con .color-btn .brown-btn {
+    background: var(--color-brown);
+}
+.btn-con .color-btn .grey-btn {
+    background: var(--color-grey);
+}
+
+.btn-con .color-btn .green-btn {
+    background: var(--color-green);
+}
+
+.btn-con .color-btn .orange-btn {
+    background: var(--color-orange);
+}
+.btn-con .color-btn .patternBtn {
+    background: var(--color-pattern);
+}
+
+.btn-con .color-btn .purple-btn {
+    background: var(--color-purple);
+    color: var(--color-white);
+}
+
+.btn-con .color-btn .white-btn {
+    background: var(--color-white);
+}
+
+.view-con {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto 5% auto;
+    align-items: center;
+    justify-items: center;
+    columns: 4;
+    column-gap: 40px;
+}
+
+.view-con div {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: var(--color-white);
+    padding-bottom: 6px;
+    position: relative;
+    overflow: hidden;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.view-con div:hover {
+    transform: scale(1.03);
+}
+.view-con div img {
+    max-width: 100%;
+}
+
+.view-con div span {
+    padding: 0.5em;
+    margin: 0.5em;
+    font-family: "Vollkorn", serif;
+}
+
+.add-cart-btn {
+    margin: 0.2em 1em 0 0.7em;
+    float: right;
+    font-family: "Inconsolata";
+    cursor: pointer;
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    background: var(--color-btn);
+    transition: all 0.4s ease 0s;
+    border: none;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    outline: none;
+}
+
+.add-cart-btn:hover {
+    background: var(--color-pink);
+    color: #fff;
+    border-radius: 0;
+}
+
+/************************ Cart page**************************/
+
+.cart-container {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0rem auto;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.3rem solid lightgray;
+    padding: 0 3rem 0 1rem;
+}
+
+.h-product {
+    width: 45%;
+    text-align: center;
+    font-family: "Inconsolata";
+}
+
+.h-price {
+    width: 20%;
+    text-align: center;
+    font-family: "Inconsolata";
+}
+
+.h-quantity {
+    width: 25%;
+    text-align: center;
+    font-family: "Inconsolata";
+}
+
+.h-total {
+    width: auto;
+    text-align: center;
+    font-family: "Inconsolata";
+}
+
+.product {
+    width: 45%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    width: 20%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity {
+    width: 25%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total {
+    width: auto;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1rem solid lightgray;
+    padding: 0.5rem 1rem;
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    border-bottom: 0.11rem solid lightgray;
+    margin: 0.2em 0;
+    padding: 0.2em 0;
+}
+
+.product img {
+    width: 10%;
+}
+
+.product i {
+    color: var(--color-red);
+    cursor: pointer;
+    width: 20%;
+}
+
+.product span {
+    font-family: "Vollkorn", serif;
+    width: 50%;
+    text-align: center;
+}
+
+.quantity span {
+    cursor: pointer;
+}
+
+.quantity .up {
+    padding-top: 0.6em;
+}
+
+.quantity .fas {
+    padding: 0 0.3em;
+    font-size: 1.2em;
+}
+
+.basket-con {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 7%;
+}
+
+.basket-con .basket-title {
+    padding-right: 9%;
+    margin-bottom: 0;
+}
+
+.basket-con .basket-total {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.next-btn {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.next-btn button {
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    background-color: var(--color-btn);
+    padding: 1rem;
+}
+
+.next-btn button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+}
+
+.remove-all-btn {
+    position: absolute;
+    left: 0.5em;
+    top: 0em;
+}
+
+.remove-all-btn button {
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    background-color: var(--color-pink);
+    padding: 0.4rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.remove-all-btn button:hover {
+    color: #222;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1200px) {
+    .view-con {
+        columns: 3;
+        width: calc(100% - 40px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .view-con {
+        columns: 2;
+    }
+
+    .product img {
+        width: 20%;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .header {
+        padding: 0 0.1rem 0 0;
+    }
+
+    .basket-con {
+        height: 2.5rem;
+    }
+
+    .remove-all-btn {
+        top: 0.1em;
+        left: 0em;
+        width: 0.3em;
+    }
+
+    .h-product {
+        padding-left: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 532px) {
+    .view-con {
+        columns: 1;
+    }
+
+    .btn-con .clothes-btn img {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn-con .color-btn {
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .btn-con {
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .btn-con .clothes-btn img {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .btn-con .color-btn {
+        text-align: center;
+    }
+
+    .btn-con .color-btn button {
+        width: 70px;
+        height: 25px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+}
