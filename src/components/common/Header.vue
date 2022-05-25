@@ -5,10 +5,10 @@
         <a class="navbar-brand" href="#">
           <img src="Img/logo.png" class="d-inline-block align-top" alt="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" @click="menuOpened = !menuOpened">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" :class="{ active: menuOpened }">
           <div class="mr-auto"></div>
           <ul class="navbar-nav">
             <li class="nav-item active">
@@ -36,6 +36,16 @@
 
 export default {
   name: 'VueHeader',
+
+  data() {
+    return {
+      menuOpened: false,
+    }
+  },
+
+  methods: {
+
+  }
 
 }
 </script>

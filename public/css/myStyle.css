@@ -443,3 +443,23 @@
   padding: 1rem;
   color: var(--primary-color);
 }
+
+
+/* ==================header=============== */
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.active.navbar-collapse {
+  -webkit-animation: dropDown 0.5s;
+  animation: dropDown 0.5s;
+}
