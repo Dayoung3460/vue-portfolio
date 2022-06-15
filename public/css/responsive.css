@@ -287,6 +287,26 @@
   }
 }
 
+@media (max-width: 1140px) {
+  .brand-area .container .justify-content-md-center .title {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .single-brand img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .brand-area .container .circle-wrap {
+    width: auto;
+    height: auto;
+  }
+}
+
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
   .services-area .services {
     width: 12rem;

@@ -326,8 +326,11 @@
   height: 140px;
   width: 140px;
   font-size: 16px;
-  top: 78px;
-  left: 72px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .brand-area .container .justify-content-md-center .title:hover {
@@ -336,8 +339,11 @@
   padding: 0;
   opacity: .8;
   background: var(--primary-color2);
-  top: 78px;
-  left: 72px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .single-brand {
