@@ -1,0 +1,634 @@
+/* @import fonts from Font.css file  */
+@import url(fonts.css);
+
+/* css variables */
+@import url(./partials/_variables.css);
+
+/* css global styling*/
+@import url(./partials/_global.css);
+
+/* ===================navigation================ */
+.header-area {
+  position: -webkit-sticky;
+  position: sticky;
+  background: whitesmoke;
+  top: 0;
+  box-shadow: var(--box-shadow);
+  z-index: 2;
+  overflow-x: hidden;
+}
+
+.navbar-expand-lg .navbar-nav {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-expand-lg .navbar-nav li:nth-child(5) {
+  margin-left: 1.5rem;
+}
+
+.navbar-expand-lg .navbar-nav img {
+  height: 25px;
+  margin-right: 1rem;
+}
+
+.header-menu {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+}
+
+.navbar-brand {
+  padding-bottom: 0.5rem;
+}
+
+.nav-link {
+  font: normal 500 17px var(--roboto);
+  text-transform: uppercase;
+  padding: 0.8em;
+  color: var(--title-color);
+}
+
+.active a {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-item a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =========================banner================= */
+
+.site-banner {
+  height: 550px;
+  position: relative;
+  padding-top: 5rem;
+}
+
+.site-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+  background: url(../Img/Botanical.jpg) repeat-x 0% 115%;
+}
+
+.site-title .title-text {
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.site-title h1.title-text span {
+  display: inline-block;
+  position: relative;
+}
+
+.site-title h1.title-text span.heart1 {
+  position: absolute;
+  font-size: 30px !important;;
+  left: 145px;
+  animation: heartbeat1 1s infinite;
+}
+
+.site-title h1.title-text span.heart2 {
+  position: absolute;
+  font-size: 30px !important;;
+  left: 292px;
+  animation: heartbeat2 1s infinite;
+}
+
+@keyframes heartbeat1
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+@keyframes heartbeat2
+{
+  0%
+  {
+    transform: scale( .55 );
+  }
+  10%
+  {
+    transform: scale( 0.8 );
+  }
+  20%
+  {
+    transform: scale( .55 );
+  }
+  40%
+  {
+    transform: scale( 0.8 );
+  }
+  60%
+  {
+    transform: scale( 0.5 );
+  }
+  90%
+  {
+    transform: scale( .85 );
+  }
+  100%
+  {
+    transform: scale( .5 );
+  }
+}
+
+
+.site-title h1.title-text span.char-text {
+  margin-right: 10px;
+}
+
+.site-title h1.title-text span::after {
+  content: '';
+  display:block;
+  width: 0;
+  height:15px;
+  background:#5e7cf3;
+  position:absolute;
+  bottom: 0%;
+  z-index: -1;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+
+}
+.site-title h1.title-text span:hover::after {
+  width: 100%
+}
+
+.site-title h3::after {
+  content: " ";
+  height: 2px;
+  width: 18vw;
+  background: black;
+  display: inline-block;
+  margin-left: 5%;
+  transform: translateY(-10px);
+}
+
+.site-title h1 {
+  font-size: 5rem;
+  letter-spacing: 8px;
+}
+
+.site-title h4 {
+  font-size: 2rem;
+}
+
+.site-buttons {
+  padding-top: 3rem;
+}
+.site-buttons .primary-button {
+  margin-right: 4rem;
+}
+
+.cv {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 0px;
+}
+
+.cv.active {
+  display: grid;
+}
+
+.cv .cvDiv {
+  position: relative;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+
+.cv .cvDiv .download {
+  position: absolute;
+  left: 46%;
+  top: 4em;
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cv img {
+  display: grid;
+  margin: 7em auto;
+  border: 1px solid var(--primary-color2);
+  width: 40%;
+}
+
+.cv .close {
+  position: absolute;
+  left: 70%;
+  top: 2em;
+  color: black;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cv .close:hover,
+.cv .close:focus,
+.cv .cvDiv .download:hover,
+.cv .cvDiv .download:focus {
+  color: red;
+}
+
+/* =====================About ================== */
+.aboutMe-area {
+  padding: 5rem 5rem 0 5rem;
+}
+
+.aboutMe-title h2 span {
+  display: block;
+  font: normal bold 45px/50px var(--roboto);
+  letter-spacing: 8px;
+}
+
+.aboutMe-title .paragraph {
+  width: 75%;
+}
+.paragraph p {
+  padding: 0.4rem 0;
+}
+
+/*===================brand Area================ */
+
+.brand-area {
+  padding: 5rem 0;
+}
+
+.brand-area .container {
+  padding-top: 5rem;
+}
+
+.brand-area .container .justify-content-md-center {
+  position: relative;
+  transition: all 0.3s ease;
+  height: 300px;
+}
+
+.brand-area .container .circle-wrap {
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.brand-area .container .justify-content-md-center .title {
+  position: absolute;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  color: #fff;
+  background: black;
+  line-height: 140px;
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  font-size: 16px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.brand-area .container .justify-content-md-center .title:hover {
+  box-shadow: var(--box-shadow);
+  position: absolute;
+  padding: 0;
+  opacity: .8;
+  background: var(--primary-color2);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.single-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.single-brand img {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.1s ease;
+}
+
+.single-brand img:hover {
+  border: 2px solid black;
+  opacity: 0.5;
+}
+
+.p1 a,
+.p2 a,
+.p3 a,
+.p4 a,
+.p5 a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* ================Service Area ================*/
+
+.services {
+  width: 50rem;
+  height: 25rem;
+}
+
+.services .services-img img {
+  width: 70px;
+  height: 70px;
+}
+
+.services-area {
+  padding: 7rem 0.8rem 0 0.8rem;
+}
+
+.services-title {
+  padding: 0 auto;
+}
+
+.services-area .services-title h1 {
+  font: normal bold 45px var(--roboto);
+}
+
+.services-area .services {
+  background: #f4f4ff;
+  padding: 2rem 0;
+  width: 16rem;
+  margin: 4rem 0.6rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.services-area .services:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.card-body .card-text {
+  overflow-y: auto;
+  height: 11em;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+.card-body .card-text .btn {
+  margin-top: 0.7em;
+}
+
+.card-body .card-text .btn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.card-body .card-text .btn:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-body .card-text .btn a:hover {
+  font-weight: 800;
+}
+
+/* =================Project Area =================*/
+
+.site-main .project-area {
+  padding: 4rem 0;
+}
+
+.site-main span.char.custom.typed {
+  color: #212529;
+}
+
+.site-main .project-area .button-group button {
+  background: transparent;
+  border: none;
+  font: normal 500 20px/130px var(--roboto);
+  text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.site-main .project-area .button-group button + button {
+  padding-left: 3rem;
+}
+
+.site-main .project-area .grid .our-project .title h4 {
+  font: normal 700 20px/15px var(--roboto-nor);
+}
+
+.site-main .project-area .grid .our-project .img a:hover img {
+  filter: brightness(1.2) drop-shadow(1px 1px 20px #adaaac);
+}
+
+.title-h1 {
+  font: normal bold 39px/40px var(--roboto);
+}
+
+/* ===============client say about me Area============ */
+
+.site-main .about-area .about-title p {
+  padding: 1rem 7rem;
+}
+
+.site-main .about-area .client {
+  background: #fff5f7;
+  box-shadow: var(--box-shadow);
+  margin: 3rem 0rem;
+}
+
+.site-main .about-area .client .client-img {
+  padding: 2rem;
+}
+
+.site-main .about-area .client .about-client {
+  padding: 1rem;
+}
+
+.site-main .about-area .client .about-client h4 {
+  font: normal 700 20px/50px var(--roboto-nor);
+}
+
+.site-main .about-area .client .about-client p {
+  font-size: 16px;
+}
+
+.site-main .about-area .owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span {
+  background: var(--primary-color);
+  width: 15px;
+}
+
+/* ===============contact me Area============ */
+
+.site-main .contact-area {
+  padding-top: 9rem;
+}
+
+.site-main .contact-area .contact {
+  background: url(../Img/contactMeBg.png) no-repeat;
+  padding: 5rem 0;
+  margin: 0 auto 3rem auto;
+}
+
+.site-main .contact-area .contact .contact-title h4 {
+  font: normal 30px/30px var(--roboto);
+  color: whitesmoke;
+  letter-spacing: 5px;
+  padding-top: 3rem;
+}
+
+.site-main .contact-area .contact .contact-title p {
+  color: whitesmoke;
+  padding: 1rem 4rem;
+}
+
+.site-main .contact-area .contact .contact-title a {
+  font-size: 30px;
+  color: white;
+}
+
+.site-main .contact-area .contact .social {
+  font-size: 35px;
+  padding: 1rem;
+}
+
+.site-main .contact-area .contact .social a {
+  padding: 1.5rem;
+  color: whitesmoke;
+  transition: transform ease;
+}
+
+.site-main .contact-area .contact .social a:hover i {
+  color: var(--primary-color);
+  transform: scale(1.3);
+}
+
+/* ==================footer Area=============== */
+
+.footer-area {
+  padding: 5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+  background: url(../Img/Botanical.jpg) repeat;
+}
+
+.footer-area .container {
+  margin-top: 2.5rem;
+}
+
+.footer-area .social h5 {
+  font: normal 500 20px/30px var(--roboto);
+}
+
+.footer-area .social a i {
+  font-size: 30px;
+  padding: 1rem;
+  color: var(--primary-color);
+}
+
+
+/* ==================header=============== */
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.active.navbar-collapse {
+  -webkit-animation: dropDown 0.5s;
+  animation: dropDown 0.5s;
+}
