@@ -65,6 +65,22 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center services-title">
+            <h1 class="text-uppercase title-h1">Nature Blend</h1>
+            <p class="para">An MES (Manufacturing Execution System) program designed for a fruit juice🧃 factory</p>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="single-brand col-md-3">
+            <a href="http://43.201.26.255:3000/" target="_blank" class="circle-wrap">
+              <img src="img/natureblend-screenshot.png" alt="screenshot"/>
+              <span class="title">Nature Blend</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center services-title">
             <h1 class="text-uppercase title-h1">Vanilla js Mini Project</h1>
             <p class="para"></p>
           </div>
