@@ -192,14 +192,8 @@
   width: 100%
 }
 
-.site-title h3::after {
-  content: " ";
-  height: 2px;
-  width: 18vw;
-  background: black;
-  display: inline-block;
-  margin-left: 5%;
-  transform: translateY(-10px);
+.site-title h3 {
+  color: var(--gray-600);
 }
 
 .site-title h1 {

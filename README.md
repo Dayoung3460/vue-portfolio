@@ -1,6 +1,6 @@
 # vue-portfolio
 
-## Front-end Portfolio Website
+## Portfolio Website
 ### ⭐ [Visit Portfolio](https://dayoungportfolio.netlify.app/)
 
 <img src="screenshot.png" width="750" height="380">

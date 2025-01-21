@@ -20,7 +20,8 @@
               <span>g</span>
               <span>,</span>
             </h1>
-            <h4 class="text-uppercase">Front-end developer</h4>
+            <h4 class="text-uppercase">Software developer</h4>
+            <h5>{{ $t('message.introduce') }}</h5>
             <div class="site-buttons">
               <div class="d-flex flex-row flex-wrap">
                 <button type="button" class="btn button primary-button" @click="openCV()">{{ $t('message.cv') }}</button>
@@ -55,6 +56,7 @@
             <div class="paragraph">
               <p class="para" v-html="$t('message.aboutMe1')"></p>
               <p class="para" v-html="$t('message.aboutMe2')"></p>
+              <p class="para" v-html="$t('message.aboutMe3')"></p>
             </div>
             <!-- <button type="button" class="btn button primary-button text-uppercase">Download CV</button> -->
           </div>
@@ -78,26 +80,11 @@
           </div>
         </div>
       </div>
+
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center services-title">
-            <h1 class="text-uppercase title-h1">Vanilla js Mini Project</h1>
-            <p class="para"></p>
-          </div>
-        </div>
-        <div class="row justify-content-md-center">
-          <div class="single-brand col-md-3">
-            <a href="https://vanilla-find-a-match.netlify.app/" target="_blank" class="circle-wrap">
-              <img src="img/find-a-match-screenshot.png"/>
-              <span class="title">Find a match</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center services-title">
-            <h1 class="text-uppercase title-h1">Vue.js Mini Project</h1>
+            <h1 class="text-uppercase title-h1">Vue.js Project</h1>
             <p class="para"></p>
           </div>
         </div>
@@ -131,7 +118,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center services-title">
-            <h1 class="text-uppercase title-h1">react.js Mini Project</h1>
+            <h1 class="text-uppercase title-h1">react.js Project</h1>
             <p class="para"></p>
           </div>
         </div>
@@ -157,6 +144,23 @@
 
         </div>
       </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center services-title">
+            <h1 class="text-uppercase title-h1">Vanilla js Project</h1>
+            <p class="para"></p>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="single-brand col-md-3">
+            <a href="https://vanilla-find-a-match.netlify.app/" target="_blank" class="circle-wrap">
+              <img src="img/find-a-match-screenshot.png"/>
+              <span class="title">Find a match</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </section>
 <!--    <section class="services-area">-->
 <!--      <div class="container">-->
