@@ -24,16 +24,20 @@
             <h5>{{ $t('message.introduce') }}</h5>
             <div class="site-buttons">
               <div class="d-flex flex-row flex-wrap">
-                <button type="button" class="btn button primary-button" @click="openCV()">{{ $t('message.cv') }}</button>
-                <div class="cv" :class="{ active: openCVBox }" v-show="openCVBox">
-                  <div class="animate cvDiv">
-                    <a class="close" @click="openCVBox = false">x</a>
-                    <a href="/doc/이력서_김다영(프론트앤드).pdf" class="download" download v-show="isKorCV">Download</a>
-                    <a href="/doc/CV_Dayoung_Kim(Front-end).pdf" class="download" download v-show="!isKorCV">Download</a>
-                    <img src="img/CV.jpeg" alt="CV(KOR)" v-show="isKorCV"/>
-                    <img src="img/CV(eng).PNG" alt="CV(ENG)" v-show="!isKorCV"/>
-                  </div>
-                </div>
+                <button type="button" class="btn button primary-button" @click="openCV()">
+                  <a target="_blank" href="https://docs.google.com/document/d/1iwFUsbdr11z0aVIDIN3bvtZ8JM11UjM9pknp9guiUgs/edit?tab=t.0#heading=h.rw1c4rmmkldi">
+                    {{ $t('message.cv') }}
+                  </a>
+                </button>
+<!--                <div class="cv" :class="{ active: openCVBox }" v-show="openCVBox">-->
+<!--                  <div class="animate cvDiv">-->
+<!--                    <a class="close" @click="openCVBox = false">x</a>-->
+<!--                    <a href="/doc/이력서_김다영(프론트앤드).pdf" class="download" download v-show="isKorCV">Download</a>-->
+<!--                    <a href="/doc/CV_Dayoung_Kim(Front-end).pdf" class="download" download v-show="!isKorCV">Download</a>-->
+<!--                    <img src="img/CV.jpeg" alt="CV(KOR)" v-show="isKorCV"/>-->
+<!--                    <img src="img/CV(eng).PNG" alt="CV(ENG)" v-show="!isKorCV"/>-->
+<!--                  </div>-->
+<!--                </div>-->
               </div>
             </div>
           </div>

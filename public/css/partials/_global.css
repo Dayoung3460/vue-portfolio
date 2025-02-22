@@ -25,15 +25,15 @@
 .button.primary-button {
   background: var(--gradient-color);
   background-clip: padding-box;
-  color: whitesmoke;
   transition: background 0.6s ease;
   box-shadow: var(--box-shadow);
-}
-
-.button.primary-button:hover {
-  background: whitesmoke;
-  background-clip: padding-box;
-  color: black;
+  padding: 0;
+  > a {
+    display: block;
+    padding: 12px 28px;
+    font-size: 24px;
+    color: whitesmoke;
+  }
 }
 
 .button.primary-button::after,
