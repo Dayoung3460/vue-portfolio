@@ -57,12 +57,35 @@
   background-clip: text;
 }
 
-.nav-item a:hover {
-  background: var(--gradient-color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.nav-item.lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  margin: 0 5px 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  &.selected {
+    background: var(--gradient-color) !important;
+    color: white;
+  }
 }
+
+.nav-item.lang:hover {
+  color: white;
+  background: var(--gradient-color);
+}
+.nav-item.lang.active {
+  background-color: #0056b3;
+  color: white;
+  border: 1px solid #004080;
+}
+
 
 /* =========================banner================= */
 

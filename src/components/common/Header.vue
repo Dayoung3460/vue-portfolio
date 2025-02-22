@@ -23,11 +23,11 @@
             <li class="nav-item point" :class="{ active: activeMenu === 3 }" @click="scrollToElement(3)">
               <a class="nav-link">Contact</a>
             </li>
-            <li class="nav-item point" @click="selectLang('ko')">
-              <a><img src="img/kor.png" alt="Korean"></a>
+            <li class="nav-item point lang" :class="{ selected: $root.$i18n.locale === 'ko' }" @click="selectLang('ko')">
+              KO
             </li>
-            <li class="nav-item point" @click="selectLang('en')">
-              <a><img src="img/usa.png" alt="Chinese"></a>
+            <li class="nav-item point lang" :class="{ selected: $root.$i18n.locale === 'en' }" @click="selectLang('en')">
+              EN
             </li>
           </ul>
         </div>
