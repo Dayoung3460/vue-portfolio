@@ -25,7 +25,7 @@
             <div class="site-buttons">
               <div class="d-flex flex-row flex-wrap">
                 <button type="button" class="btn button primary-button" @click="openCV()">
-                  <a target="_blank" href="https://docs.google.com/document/d/1iwFUsbdr11z0aVIDIN3bvtZ8JM11UjM9pknp9guiUgs/edit?tab=t.0#heading=h.rw1c4rmmkldi">
+                  <a target="_blank" href="https://docs.google.com/document/d/1T1qoSS4oMLhF8pcRekYHvGtuNCbfWnoXaRvXA2U126U/edit?tab=t.0">
                     {{ $t('message.cv') }}
                   </a>
                 </button>
